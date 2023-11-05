@@ -89,7 +89,6 @@ $(function() {
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                handle_receive(ec, bytes_transferred);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                <a class="code hl_function" href="class_r_type_server.html#a34876a995bb3697191ed6b7fdf1564fc">start_receiving</a>();  <span class="comment">// Continue listening</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                <span class="comment">// Error during data reception</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Erreur lors de la réception des données: &quot;</span> &lt;&lt; ec.message() &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <span class="comment">// Check for specific errors like disconnection or crash</span></div>
