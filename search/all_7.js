@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['senddata_17',['sendData',['../class_client.html#a55628f354dd8b778aaf8ebd7df6b2dd9',1,'Client']]],
-  ['sendmsg_18',['sendMsg',['../class_client.html#a8fa4c7b7ae7cc989ebeed89403cd8d81',1,'Client']]],
-  ['start_5freceiving_19',['start_receiving',['../class_r_type_server.html#a34876a995bb3697191ed6b7fdf1564fc',1,'RTypeServer']]]
+  ['readdata_0',['readData',['../class_c_stream_buffer.html#a051ab470ca96e88cedecb54d9eab14ef',1,'CStreamBuffer']]],
+  ['reciever_1',['reciever',['../class_client.html#ad5cbc18cee790c8f520e640d452235a4',1,'Client']]],
+  ['renderer_2',['Renderer',['../class_renderer.html',1,'Renderer'],['../class_renderer.html#a7ebf46f54dab9905f79b80f7fddb76a6',1,'Renderer::Renderer()']]],
+  ['rtypeserver_3',['RTypeServer',['../class_r_type_server.html',1,'RTypeServer'],['../class_r_type_server.html#a5aa93fbafa41c6a9dea9838a38ca5617',1,'RTypeServer::RTypeServer()']]]
 ];

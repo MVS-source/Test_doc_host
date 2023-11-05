@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['client_25',['Client',['../class_client.html',1,'']]],
-  ['cstreambuffer_26',['CStreamBuffer',['../class_c_stream_buffer.html',1,'']]]
+  ['client_0',['Client',['../class_client.html',1,'']]],
+  ['cstreambuffer_1',['CStreamBuffer',['../class_c_stream_buffer.html',1,'']]]
 ];
