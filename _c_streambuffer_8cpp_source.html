@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>R-type: Client/src/CStreambuffer.cpp Source File</title>
+<title>R-type: Client/src/Network/CStreambuffer.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_922c588100a187620fdc1533bc178f73.html">Client</a></li><li class="navelem"><a class="el" href="dir_71db3c9ac669ad0e48d6cd88f7e1e924.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_922c588100a187620fdc1533bc178f73.html">Client</a></li><li class="navelem"><a class="el" href="dir_71db3c9ac669ad0e48d6cd88f7e1e924.html">src</a></li><li class="navelem"><a class="el" href="dir_1923d69e804aa8c43539fd83ce969c83.html">Network</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -78,43 +78,43 @@ $(function() {
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** ICStreamBuffer.cpp</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../include/CStreamBuffer.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;CStreamBuffer.hpp&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_c_stream_buffer.html#ac9c6fd17ad2026709db6a80aa7346e42">   14</a></span><a class="code hl_function" href="class_c_stream_buffer.html#ac9c6fd17ad2026709db6a80aa7346e42">CStreamBuffer::CStreamBuffer</a>()</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    : _istream(&amp;_streambuf), _ostream(&amp;_streambuf)</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{}</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">   23</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">CStreamBuffer::writen</a>(<span class="keywordtype">int</span> n)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    _ostream.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(&amp;n), <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_c_stream_buffer.html#ad13ffb90ffbb1c46726cdb438e54ad9f">   33</a></span>boost::asio::streambuf &amp;<a class="code hl_function" href="class_c_stream_buffer.html#ad13ffb90ffbb1c46726cdb438e54ad9f">CStreamBuffer::getCStreamBuffer</a>()</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> _streambuf;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_stream_buffer.html#add010e13e3bd18eef4e5fcbd8e1ce7a4">   46</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_stream_buffer.html#add010e13e3bd18eef4e5fcbd8e1ce7a4">CStreamBuffer::writeData</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdata.html">data</a> &amp;d)</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_function" href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">writen</a>(d.id);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_function" href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">writen</a>(d.event);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">writen</a>(d.dir);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_stream_buffer.html#a051ab470ca96e88cedecb54d9eab14ef">   61</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdata.html">data</a> <a class="code hl_class" href="class_c_stream_buffer.html">CStreamBuffer</a>::readData()</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structdata.html">data</a> d = {-1, -1, -1};</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    _istream.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(&amp;d.id), <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    _istream.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(&amp;d.event), <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    _istream.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(&amp;d.dir), <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> d;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_c_stream_buffer.html#ac9c6fd17ad2026709db6a80aa7346e42">   10</a></span><a class="code hl_function" href="class_c_stream_buffer.html#ac9c6fd17ad2026709db6a80aa7346e42">CStreamBuffer::CStreamBuffer</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    : _istream(&amp;_streambuf), _ostream(&amp;_streambuf)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">   14</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">CStreamBuffer::writen</a>(<span class="keywordtype">int</span> n)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    _ostream.write(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(&amp;n), <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_c_stream_buffer.html#ad13ffb90ffbb1c46726cdb438e54ad9f">   19</a></span>boost::asio::streambuf &amp;<a class="code hl_function" href="class_c_stream_buffer.html#ad13ffb90ffbb1c46726cdb438e54ad9f">CStreamBuffer::getCStreamBuffer</a>()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">return</span> _streambuf;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_c_stream_buffer.html#add010e13e3bd18eef4e5fcbd8e1ce7a4">   24</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_stream_buffer.html#add010e13e3bd18eef4e5fcbd8e1ce7a4">CStreamBuffer::writeData</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdata.html">data</a> &amp;d)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">writen</a>(d.id);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">writen</a>(d.event);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">writen</a>(d.dir);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_c_stream_buffer.html#a051ab470ca96e88cedecb54d9eab14ef">   31</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdata.html">data</a> <a class="code hl_class" href="class_c_stream_buffer.html">CStreamBuffer</a>::readData()</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structdata.html">data</a> d = {-1, -1, -1};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    _istream.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(&amp;d.id), <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    _istream.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(&amp;d.event), <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    _istream.read(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(&amp;d.dir), <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span> (d);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
 <div class="ttc" id="aclass_c_stream_buffer_html"><div class="ttname"><a href="class_c_stream_buffer.html">CStreamBuffer</a></div><div class="ttdoc">Class to manage data streams.</div><div class="ttdef"><b>Definition:</b> <a href="_c_stream_buffer_8hpp_source.html#l00026">CStreamBuffer.hpp:26</a></div></div>
-<div class="ttc" id="aclass_c_stream_buffer_html_ac9c6fd17ad2026709db6a80aa7346e42"><div class="ttname"><a href="class_c_stream_buffer.html#ac9c6fd17ad2026709db6a80aa7346e42">CStreamBuffer::CStreamBuffer</a></div><div class="ttdeci">CStreamBuffer()</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> <a href="_c_streambuffer_8cpp_source.html#l00014">CStreambuffer.cpp:14</a></div></div>
-<div class="ttc" id="aclass_c_stream_buffer_html_ad13ffb90ffbb1c46726cdb438e54ad9f"><div class="ttname"><a href="class_c_stream_buffer.html#ad13ffb90ffbb1c46726cdb438e54ad9f">CStreamBuffer::getCStreamBuffer</a></div><div class="ttdeci">boost::asio::streambuf &amp; getCStreamBuffer()</div><div class="ttdoc">Get the custom stream buffer.</div><div class="ttdef"><b>Definition:</b> <a href="_c_streambuffer_8cpp_source.html#l00033">CStreambuffer.cpp:33</a></div></div>
-<div class="ttc" id="aclass_c_stream_buffer_html_add010e13e3bd18eef4e5fcbd8e1ce7a4"><div class="ttname"><a href="class_c_stream_buffer.html#add010e13e3bd18eef4e5fcbd8e1ce7a4">CStreamBuffer::writeData</a></div><div class="ttdeci">void writeData(struct data &amp;d)</div><div class="ttdoc">Write data structure to the stream.</div><div class="ttdef"><b>Definition:</b> <a href="_c_streambuffer_8cpp_source.html#l00046">CStreambuffer.cpp:46</a></div></div>
-<div class="ttc" id="aclass_c_stream_buffer_html_ae406067b22f576fcc5643d8471f3bba1"><div class="ttname"><a href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">CStreamBuffer::writen</a></div><div class="ttdeci">void writen(int n)</div><div class="ttdoc">Write an integer to the data stream.</div><div class="ttdef"><b>Definition:</b> <a href="_c_streambuffer_8cpp_source.html#l00023">CStreambuffer.cpp:23</a></div></div>
+<div class="ttc" id="aclass_c_stream_buffer_html_ac9c6fd17ad2026709db6a80aa7346e42"><div class="ttname"><a href="class_c_stream_buffer.html#ac9c6fd17ad2026709db6a80aa7346e42">CStreamBuffer::CStreamBuffer</a></div><div class="ttdeci">CStreamBuffer()</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> <a href="_c_streambuffer_8cpp_source.html#l00010">CStreambuffer.cpp:10</a></div></div>
+<div class="ttc" id="aclass_c_stream_buffer_html_ad13ffb90ffbb1c46726cdb438e54ad9f"><div class="ttname"><a href="class_c_stream_buffer.html#ad13ffb90ffbb1c46726cdb438e54ad9f">CStreamBuffer::getCStreamBuffer</a></div><div class="ttdeci">boost::asio::streambuf &amp; getCStreamBuffer()</div><div class="ttdoc">Get the custom stream buffer.</div><div class="ttdef"><b>Definition:</b> <a href="_c_streambuffer_8cpp_source.html#l00019">CStreambuffer.cpp:19</a></div></div>
+<div class="ttc" id="aclass_c_stream_buffer_html_add010e13e3bd18eef4e5fcbd8e1ce7a4"><div class="ttname"><a href="class_c_stream_buffer.html#add010e13e3bd18eef4e5fcbd8e1ce7a4">CStreamBuffer::writeData</a></div><div class="ttdeci">void writeData(struct data &amp;d)</div><div class="ttdoc">Write data structure to the stream.</div><div class="ttdef"><b>Definition:</b> <a href="_c_streambuffer_8cpp_source.html#l00024">CStreambuffer.cpp:24</a></div></div>
+<div class="ttc" id="aclass_c_stream_buffer_html_ae406067b22f576fcc5643d8471f3bba1"><div class="ttname"><a href="class_c_stream_buffer.html#ae406067b22f576fcc5643d8471f3bba1">CStreamBuffer::writen</a></div><div class="ttdeci">void writen(int n)</div><div class="ttdoc">Write an integer to the data stream.</div><div class="ttdef"><b>Definition:</b> <a href="_c_streambuffer_8cpp_source.html#l00014">CStreambuffer.cpp:14</a></div></div>
 <div class="ttc" id="astructdata_html"><div class="ttname"><a href="structdata.html">data</a></div><div class="ttdoc">Data structure used for communication.</div><div class="ttdef"><b>Definition:</b> <a href="_c_stream_buffer_8hpp_source.html#l00016">CStreamBuffer.hpp:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
