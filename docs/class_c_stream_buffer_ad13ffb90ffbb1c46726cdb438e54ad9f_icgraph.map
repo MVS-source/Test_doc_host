@@ -1,6 +1,0 @@
-<map id="CStreamBuffer::getCStreamBuffer" name="CStreamBuffer::getCStreamBuffer">
-<area shape="rect" id="node1" title="Get the custom stream buffer." alt="" coords="513,5,716,47"/>
-<area shape="rect" id="node2" href="$class_client.html#a55628f354dd8b778aaf8ebd7df6b2dd9" title="Send data." alt="" coords="335,13,465,39"/>
-<area shape="rect" id="node3" href="$class_client.html#ab5a8b80802c438dc16484efd9502eaf4" title="Initialize." alt="" coords="160,13,287,39"/>
-<area shape="rect" id="node4" href="$class_client.html#a38aacc9eda023eff7dc44d9b8cd530fe" title="Constructor." alt="" coords="5,13,112,39"/>
-</map>
