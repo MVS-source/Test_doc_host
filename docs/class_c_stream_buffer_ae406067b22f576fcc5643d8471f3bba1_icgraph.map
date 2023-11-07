@@ -1,0 +1,7 @@
+<map id="CStreamBuffer::writen" name="CStreamBuffer::writen">
+<area shape="rect" id="node1" title="Write an integer to the data stream." alt="" coords="751,5,917,32"/>
+<area shape="rect" id="node2" href="$class_c_stream_buffer.html#add010e13e3bd18eef4e5fcbd8e1ce7a4" title="Write data structure to the stream." alt="" coords="513,5,703,32"/>
+<area shape="rect" id="node3" href="$class_client.html#a55628f354dd8b778aaf8ebd7df6b2dd9" title="Send data." alt="" coords="335,5,465,32"/>
+<area shape="rect" id="node4" href="$class_client.html#ab5a8b80802c438dc16484efd9502eaf4" title="Initialize." alt="" coords="160,5,287,32"/>
+<area shape="rect" id="node5" href="$class_client.html#a38aacc9eda023eff7dc44d9b8cd530fe" title="Constructor." alt="" coords="5,5,112,32"/>
+</map>
