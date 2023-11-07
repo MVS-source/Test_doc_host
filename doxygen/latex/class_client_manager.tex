@@ -1,0 +1,111 @@
+\hypertarget{class_client_manager}{}\doxysection{Client\+Manager Class Reference}
+\label{class_client_manager}\index{ClientManager@{ClientManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_client_manager_a15a62c9c9af1748482d8853f2b96f61d}{Client\+Manager}} (boost\+::asio\+::io\+\_\+context \&io\+\_\+context)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_client_manager_a8991e5aa60249ce5c2991557ab0e8d78}{add\+Client}} (boost\+::asio\+::ip\+::tcp\+::socket \&socket, boost\+::asio\+::ip\+::tcp\+::endpoint \&endpoint, boost\+::asio\+::io\+\_\+context \&io\+\_\+context)
+\item 
+bool \mbox{\hyperlink{class_client_manager_aa21d685bf5c2a8c0b1187da918c40989}{add\+Udp}} (boost\+::asio\+::ip\+::udp\+::socket \&socket, boost\+::asio\+::ip\+::udp\+::endpoint \&endpoint, size\+\_\+t id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_client_manager_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{_client_manager_8hpp_source}{Client\+Manager.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_client_manager_a15a62c9c9af1748482d8853f2b96f61d}\label{class_client_manager_a15a62c9c9af1748482d8853f2b96f61d}} 
+\index{ClientManager@{ClientManager}!ClientManager@{ClientManager}}
+\index{ClientManager@{ClientManager}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{ClientManager()}{ClientManager()}}
+{\footnotesize\ttfamily Client\+Manager\+::\+Client\+Manager (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+context \&}]{io\+\_\+context }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_lient_manager_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_c_lient_manager_8cpp_source}{CLient\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011 \{}
+\DoxyCodeLine{00012     \_clients.reserve(\_maxClients);}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_client_manager_af605d4fa9dab04b9874bf307277cd8a3}\label{class_client_manager_af605d4fa9dab04b9874bf307277cd8a3}} 
+\index{ClientManager@{ClientManager}!````~ClientManager@{$\sim$ClientManager}}
+\index{````~ClientManager@{$\sim$ClientManager}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$ClientManager()}{~ClientManager()}}
+{\footnotesize\ttfamily Client\+Manager\+::$\sim$\+Client\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_lient_manager_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_c_lient_manager_8cpp_source}{CLient\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&client : \_clients) \{}
+\DoxyCodeLine{00018         client-\/>tcpsocket.close();}
+\DoxyCodeLine{00019         client-\/>udpSocket.close();}
+\DoxyCodeLine{00020     \}}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_client_manager_a8991e5aa60249ce5c2991557ab0e8d78}\label{class_client_manager_a8991e5aa60249ce5c2991557ab0e8d78}} 
+\index{ClientManager@{ClientManager}!addClient@{addClient}}
+\index{addClient@{addClient}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{addClient()}{addClient()}}
+{\footnotesize\ttfamily size\+\_\+t Client\+Manager\+::add\+Client (\begin{DoxyParamCaption}\item[{boost\+::asio\+::ip\+::tcp\+::socket \&}]{socket,  }\item[{boost\+::asio\+::ip\+::tcp\+::endpoint \&}]{endpoint,  }\item[{boost\+::asio\+::io\+\_\+context \&}]{io\+\_\+context }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_lient_manager_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_c_lient_manager_8cpp_source}{CLient\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024 \{}
+\DoxyCodeLine{00025     \textcolor{keywordflow}{if} (\_clients.size() >= \_maxClients)}
+\DoxyCodeLine{00026         \textcolor{keywordflow}{return} (0);}
+\DoxyCodeLine{00027     \_clients.emplace\_back(std::make\_unique<ClientInfo>(io\_context));}
+\DoxyCodeLine{00028     \_clients.back()-\/>tcpsocket = std::move(socket);}
+\DoxyCodeLine{00029     \_clients.back()-\/>tcpEndpoint = endpoint;}
+\DoxyCodeLine{00030     \_clients.back()-\/>clientId = \_clients.size();}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{return} (\_clients.back()-\/>clientId);}
+\DoxyCodeLine{00032 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_client_manager_aa21d685bf5c2a8c0b1187da918c40989}\label{class_client_manager_aa21d685bf5c2a8c0b1187da918c40989}} 
+\index{ClientManager@{ClientManager}!addUdp@{addUdp}}
+\index{addUdp@{addUdp}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{addUdp()}{addUdp()}}
+{\footnotesize\ttfamily bool Client\+Manager\+::add\+Udp (\begin{DoxyParamCaption}\item[{boost\+::asio\+::ip\+::udp\+::socket \&}]{socket,  }\item[{boost\+::asio\+::ip\+::udp\+::endpoint \&}]{endpoint,  }\item[{size\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_lient_manager_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{_c_lient_manager_8cpp_source}{CLient\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035 \{}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} >= \_clients.size())}
+\DoxyCodeLine{00037         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00038     \_clients[id]-\/>udpSocket = std::move(socket);}
+\DoxyCodeLine{00039     \_clients[id]-\/>udpEndpoint = endpoint;}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Server/include/Client\+Manager.\+hpp\item 
+Server/src/\+Networking/CLient\+Manager.\+cpp\end{DoxyCompactItemize}

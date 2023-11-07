@@ -1,0 +1,43 @@
+\hypertarget{_renderer_8hpp_source}{}\doxysection{Renderer.\+hpp}
+\label{_renderer_8hpp_source}\index{Client/include/Renderer.hpp@{Client/include/Renderer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00002}00002 \textcolor{comment}{** EPITECH PROJECT, 2023}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00003}00003 \textcolor{comment}{** Untitled (Workspace)}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00004}00004 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00005}00005 \textcolor{comment}{** Renderer.hpp}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00006}00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00008}00008 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00009}00009 \textcolor{preprocessor}{    \#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00010}00010 \textcolor{preprocessor}{    \#include <SFML/Window.hpp>}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00011}00011 \textcolor{preprocessor}{    \#include <SFML/System.hpp>}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00013}00013 \textcolor{preprocessor}{\#define TITLE "{}R-\/Type"{}}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00014}00014 \textcolor{preprocessor}{\#define TEXTSIZE 24}}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00020}\mbox{\hyperlink{class_renderer}{00020}} \textcolor{keyword}{class }\mbox{\hyperlink{class_renderer}{Renderer}} \{}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00021}00021     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00025}00025         \mbox{\hyperlink{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}{Renderer}}();}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00030}00030         \mbox{\hyperlink{class_renderer_afeee408862d5bd6255a6882d47e6d5cd}{\string~Renderer}}();}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00035}00035         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_renderer_a40496a842d72dd1cfd9f0ecafbbe5a30}{initRenderer}}();}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00041}00041         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_renderer_a7fdde8221085c630d7fc04b093d45859}{loadSprite}}(\textcolor{keyword}{const} std::string \&path);}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00046}00046         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_renderer_aaaa008f32b4da976fe4c5a01665dc910}{drawSprite}}();}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00051}00051         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_renderer_a61b9971f58fb16f91730bf12da9dd8d2}{drawText}}(std::string text, \textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y);}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00056}00056         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_renderer_a3b5f86a8916b9075e7b852a9fd5d37a2}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00061}00061         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_renderer_a38f343c2857c321b869f5e5ecf4c0e56}{displayScreen}}();}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00063}00063     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00064}00064         sf::RenderWindow \_window;}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00065}00065         std::vector<sf::Sprite> \_sprites;}
+\DoxyCodeLine{\Hypertarget{_renderer_8hpp_source_l00066}00066 \};}
+
+\end{DoxyCode}

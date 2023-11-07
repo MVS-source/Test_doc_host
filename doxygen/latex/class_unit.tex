@@ -1,0 +1,210 @@
+\hypertarget{class_unit}{}\doxysection{Unit Class Reference}
+\label{class_unit}\index{Unit@{Unit}}
+
+
+Inheritance diagram for Unit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{class_unit__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Unit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_unit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unit_afeef34a470bc68d0605ad74153ae1805}{Unit}} (const std\+::string \&path, const \mbox{\hyperlink{struct_drawable_params}{Drawable\+Params}} \&params, const \mbox{\hyperlink{struct_rigid_body_params}{Rigid\+Body\+Params}} \&rigid\+Body\+Params)
+\item 
+void \mbox{\hyperlink{class_unit_a5e1433bfbfe90ff797c7c3ebe970b677}{set\+Position}} (sf\+::\+Vector2f pos)
+\item 
+void \mbox{\hyperlink{class_unit_aae5278749eb1d9c1fb3dafef35457895}{set\+Scale}} (sf\+::\+Vector2f scale)
+\item 
+void \mbox{\hyperlink{class_unit_a6c8bde0e602b1be6195543c920f7dd00}{set\+Rotation}} (float rotation)
+\item 
+void \mbox{\hyperlink{class_unit_afe342066be30dd414b88bdf93b585baa}{set\+Animation}} (\mbox{\hyperlink{class_animation}{Animation}} $\ast$animation)
+\item 
+void \mbox{\hyperlink{class_unit_ad30b854c5d5c752358b99171150fd30f}{update}} (float dt)
+\item 
+void \mbox{\hyperlink{class_unit_a5c2026d7f3bcb8312b435e9c3042f8af}{draw}} (sf\+::\+Render\+Window \&window)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_drawable}{Drawable}} \mbox{\hyperlink{class_unit_a5337cd4307a532c3f62ba6c82314dabb}{\+\_\+drawable}}
+\item 
+\mbox{\hyperlink{class_rigid_body}{Rigid\+Body}} \mbox{\hyperlink{class_unit_af5e3b3de8c43b900cec27c6793472637}{\+\_\+rigid\+Body}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_unit_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{_unit_8hpp_source}{Unit.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_unit_afeef34a470bc68d0605ad74153ae1805}\label{class_unit_afeef34a470bc68d0605ad74153ae1805}} 
+\index{Unit@{Unit}!Unit@{Unit}}
+\index{Unit@{Unit}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{Unit()}{Unit()}}
+{\footnotesize\ttfamily Unit\+::\+Unit (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{const \mbox{\hyperlink{struct_drawable_params}{Drawable\+Params}} \&}]{params,  }\item[{const \mbox{\hyperlink{struct_rigid_body_params}{Rigid\+Body\+Params}} \&}]{rigid\+Body\+Params }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_unit_8cpp_source}{Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011     : \_drawable(path, dParams),}
+\DoxyCodeLine{00012       \_rigidBody(rbParams.pos, rbParams.velocity, rbParams.hitbox)}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014     \_drawable.setParams(dParams.pos, dParams.scale, dParams.rotation);}
+\DoxyCodeLine{00015 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_unit_a5c2026d7f3bcb8312b435e9c3042f8af}\label{class_unit_a5c2026d7f3bcb8312b435e9c3042f8af}} 
+\index{Unit@{Unit}!draw@{draw}}
+\index{draw@{draw}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Unit\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{_unit_8cpp_source}{Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044 \{}
+\DoxyCodeLine{00045     \_drawable.draw(window);}
+\DoxyCodeLine{00046 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_unit_afe342066be30dd414b88bdf93b585baa}\label{class_unit_afe342066be30dd414b88bdf93b585baa}} 
+\index{Unit@{Unit}!setAnimation@{setAnimation}}
+\index{setAnimation@{setAnimation}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{setAnimation()}{setAnimation()}}
+{\footnotesize\ttfamily void Unit\+::set\+Animation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_animation}{Animation}} $\ast$}]{animation }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_unit_8cpp_source}{Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034 \{}
+\DoxyCodeLine{00035     \_drawable.setAnimation(animation);}
+\DoxyCodeLine{00036 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_unit_a5e1433bfbfe90ff797c7c3ebe970b677}\label{class_unit_a5e1433bfbfe90ff797c7c3ebe970b677}} 
+\index{Unit@{Unit}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Unit\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_unit_8cpp_source}{Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018 \{}
+\DoxyCodeLine{00019     \_rigidBody.setPosition(pos);}
+\DoxyCodeLine{00020     \_drawable.setParams(pos, \_drawable.getSprite().getScale(), \_drawable.getSprite().getRotation());}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_unit_a6c8bde0e602b1be6195543c920f7dd00}\label{class_unit_a6c8bde0e602b1be6195543c920f7dd00}} 
+\index{Unit@{Unit}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily void Unit\+::set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{rotation }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_unit_8cpp_source}{Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029 \{}
+\DoxyCodeLine{00030     \_drawable.setParams(\_drawable.getSprite().getPosition(), \_drawable.getSprite().getScale(), rotation);}
+\DoxyCodeLine{00031 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_unit_aae5278749eb1d9c1fb3dafef35457895}\label{class_unit_aae5278749eb1d9c1fb3dafef35457895}} 
+\index{Unit@{Unit}!setScale@{setScale}}
+\index{setScale@{setScale}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily void Unit\+::set\+Scale (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{scale }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_unit_8cpp_source}{Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024 \{}
+\DoxyCodeLine{00025     \_drawable.setParams(\_drawable.getSprite().getPosition(), scale, \_drawable.getSprite().getRotation());}
+\DoxyCodeLine{00026 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_unit_ad30b854c5d5c752358b99171150fd30f}\label{class_unit_ad30b854c5d5c752358b99171150fd30f}} 
+\index{Unit@{Unit}!update@{update}}
+\index{update@{update}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Unit\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_unit_8cpp_source}{Unit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039 \{}
+\DoxyCodeLine{00040     \_drawable.update(dt);}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_unit_a5337cd4307a532c3f62ba6c82314dabb}\label{class_unit_a5337cd4307a532c3f62ba6c82314dabb}} 
+\index{Unit@{Unit}!\_drawable@{\_drawable}}
+\index{\_drawable@{\_drawable}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{\_drawable}{\_drawable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_drawable}{Drawable}} Unit\+::\+\_\+drawable\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{_unit_8hpp_source}{Unit.\+hpp}}.
+
+\mbox{\Hypertarget{class_unit_af5e3b3de8c43b900cec27c6793472637}\label{class_unit_af5e3b3de8c43b900cec27c6793472637}} 
+\index{Unit@{Unit}!\_rigidBody@{\_rigidBody}}
+\index{\_rigidBody@{\_rigidBody}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{\_rigidBody}{\_rigidBody}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_rigid_body}{Rigid\+Body}} Unit\+::\+\_\+rigid\+Body\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{_unit_8hpp_source}{Unit.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/\+Game/Unit.\+hpp\item 
+Client/src/\+Game/Unit.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,49 @@
+\hypertarget{_i_client_8hpp_source}{}\doxysection{IClient.\+hpp}
+\label{_i_client_8hpp_source}\index{Client/include/Network/IClient.hpp@{Client/include/Network/IClient.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00002}00002 \textcolor{comment}{** EPITECH PROJECT, 2023}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00003}00003 \textcolor{comment}{** Untitled (Workspace)}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00004}00004 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00005}00005 \textcolor{comment}{** IClient.hpp}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00006}00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00008}00008 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00009}00009 \textcolor{preprocessor}{    \#include "{}TQueue.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00010}00010 \textcolor{preprocessor}{    \#include "{}Message.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00011}00011 \textcolor{preprocessor}{    \#include "{}Connection.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00013}00013 \textcolor{preprocessor}{\#define PORT "{}12345"{}}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00014}00014 \textcolor{preprocessor}{\#define UPORT "{}54321"{}}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00015}00015 \textcolor{preprocessor}{\#define IP "{}127.0.0.1"{}}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00017}00017 \textcolor{keyword}{namespace }network \{}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00018}\mbox{\hyperlink{classnetwork_1_1_i_client}{00018}}     \textcolor{keyword}{class }\mbox{\hyperlink{classnetwork_1_1_i_client}{IClient}} \{}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00019}00019         \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00020}00020             \mbox{\hyperlink{classnetwork_1_1_i_client}{IClient}}(std::string ip = IP, std::string port = PORT, std::string \textcolor{keywordtype}{id} = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00021}00021             \textcolor{keyword}{virtual} \mbox{\hyperlink{classnetwork_1_1_i_client}{\string~IClient}}();}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00022}00022             \textcolor{keywordtype}{bool} Connect();}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00023}00023             \textcolor{keywordtype}{void} Disconnect();}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00024}00024             \textcolor{keywordtype}{bool} isConnected() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00025}00025             \mbox{\hyperlink{classnetwork_1_1_t_queue}{TQueue}} \&getRecvQueue();}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00026}00026         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00027}00027             boost::asio::io\_context \_io\_context;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00028}00028             boost::asio::io\_context::work \_work;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00029}00029             boost::asio::ip::udp::socket \_usocket;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00030}00030             boost::asio::ip::tcp::socket \_tsocket;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00031}00031             std::thread \_context\_thread;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00032}00032             boost::asio::ip::udp::endpoint \_uendpoint;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00033}00033             boost::asio::ip::tcp::endpoint \_tendpoint;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00034}00034             boost::system::error\_code \_ec;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00035}00035             \textcolor{comment}{// first sets everything up asio related then pass it to connection}}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00036}00036             std::unique\_ptr<Connection> \_connection;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00037}00037         \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00038}00038             \mbox{\hyperlink{classnetwork_1_1_t_queue}{TQueue}} \_recvQueue;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00039}00039             std::string \_ip;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00040}00040             std::string \_port;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00041}00041             std::string \_id;}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00042}00042     \};}
+\DoxyCodeLine{\Hypertarget{_i_client_8hpp_source_l00043}00043 \}}
+
+\end{DoxyCode}

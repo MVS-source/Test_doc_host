@@ -1,0 +1,119 @@
+\hypertarget{class_t_c_p_connection}{}\doxysection{TCPConnection Class Reference}
+\label{class_t_c_p_connection}\index{TCPConnection@{TCPConnection}}
+
+
+Inheritance diagram for TCPConnection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_t_c_p_connection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TCPConnection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_t_c_p_connection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_t_c_p_connection}{TCPConnection}} $>$ \mbox{\hyperlink{class_t_c_p_connection_aedcb479bd557f113f873433f2cab84bc}{pointer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::asio\+::ip\+::tcp\+::socket \& \mbox{\hyperlink{class_t_c_p_connection_a9a636f390d306cba4ba831d203f8d38c}{socket}} ()
+\item 
+void \mbox{\hyperlink{class_t_c_p_connection_a8aabb8be6e57fcc4e611ee9906eedfc1}{start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static pointer \mbox{\hyperlink{class_t_c_p_connection_ac4a914fc0809855d94c19bb75088353d}{create}} (boost\+::asio\+::io\+\_\+context \&io\+\_\+context)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_t_c_p_server_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{_t_c_p_server_8hpp_source}{TCPServer.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_t_c_p_connection_aedcb479bd557f113f873433f2cab84bc}\label{class_t_c_p_connection_aedcb479bd557f113f873433f2cab84bc}} 
+\index{TCPConnection@{TCPConnection}!pointer@{pointer}}
+\index{pointer@{pointer}!TCPConnection@{TCPConnection}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily typedef boost\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_t_c_p_connection}{TCPConnection}}$>$ TCPConnection\+::pointer}
+
+
+
+Definition at line \mbox{\hyperlink{_t_c_p_server_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_t_c_p_server_8hpp_source}{TCPServer.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_c_p_connection_ac4a914fc0809855d94c19bb75088353d}\label{class_t_c_p_connection_ac4a914fc0809855d94c19bb75088353d}} 
+\index{TCPConnection@{TCPConnection}!create@{create}}
+\index{create@{create}!TCPConnection@{TCPConnection}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily TCPConnection\+::pointer TCPConnection\+::create (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+context \&}]{io\+\_\+context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_t_c_p_server_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_t_c_p_server_8cpp_source}{TCPServer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011 \{}
+\DoxyCodeLine{00012     \textcolor{keywordflow}{return} pointer(\textcolor{keyword}{new} \mbox{\hyperlink{class_t_c_p_connection}{TCPConnection}}(io\_context));}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_c_p_connection_a9a636f390d306cba4ba831d203f8d38c}\label{class_t_c_p_connection_a9a636f390d306cba4ba831d203f8d38c}} 
+\index{TCPConnection@{TCPConnection}!socket@{socket}}
+\index{socket@{socket}!TCPConnection@{TCPConnection}}
+\doxysubsubsection{\texorpdfstring{socket()}{socket()}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::tcp\+::socket \& TCPConnection\+::socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_t_c_p_server_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_t_c_p_server_8cpp_source}{TCPServer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{return} \_socket;}
+\DoxyCodeLine{00018 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_c_p_connection_a8aabb8be6e57fcc4e611ee9906eedfc1}\label{class_t_c_p_connection_a8aabb8be6e57fcc4e611ee9906eedfc1}} 
+\index{TCPConnection@{TCPConnection}!start@{start}}
+\index{start@{start}!TCPConnection@{TCPConnection}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void TCPConnection\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_t_c_p_server_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_t_c_p_server_8cpp_source}{TCPServer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022     start\_read();}
+\DoxyCodeLine{00023 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Server/include/TCPServer.\+hpp\item 
+Server/src/\+Networking/TCPServer.\+cpp\end{DoxyCompactItemize}

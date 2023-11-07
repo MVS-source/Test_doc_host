@@ -1,0 +1,156 @@
+\hypertarget{class_transform}{}\doxysection{Transform Class Reference}
+\label{class_transform}\index{Transform@{Transform}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transform_ad11072f40a9995ab1e044a48c007286b}{Transform}} (sf\+::\+Vector2f pos=\{0, 0\}, sf\+::\+Vector2f scale=\{1, 1\}, float rotation=0.\+0)
+\item 
+void \mbox{\hyperlink{class_transform_a9dc505a9d9d9b7c7b46e416713ebc83a}{set\+Position}} (sf\+::\+Vector2f pos)
+\item 
+void \mbox{\hyperlink{class_transform_a505af70c348c16baef7ba9bed19e3ca1}{set\+Scale}} (sf\+::\+Vector2f scale)
+\item 
+void \mbox{\hyperlink{class_transform_aef821c00885810e430f61b274a6089db}{set\+Rotation}} (float rotation)
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_transform_ae38cb86554d00813451ed161abe12584}{get\+Pos}} ()
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_transform_a032dc2eb15f8609a976d5846489698fe}{get\+Scale}} ()
+\item 
+float \mbox{\hyperlink{class_transform_ab15164f1690929c45e636514c0dafb7f}{get\+Rotation}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_transform_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{_transform_8hpp_source}{Transform.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_transform_ad11072f40a9995ab1e044a48c007286b}\label{class_transform_ad11072f40a9995ab1e044a48c007286b}} 
+\index{Transform@{Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos = {\ttfamily \{0,~0\}},  }\item[{sf\+::\+Vector2f}]{scale = {\ttfamily \{1,~1\}},  }\item[{float}]{rotation = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transform_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_transform_8cpp_source}{Transform.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011 : \_pos(pos), \_scale(scale), \_rotation(rotation)}
+\DoxyCodeLine{00012 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_transform_ae38cb86554d00813451ed161abe12584}\label{class_transform_ae38cb86554d00813451ed161abe12584}} 
+\index{Transform@{Transform}!getPos@{getPos}}
+\index{getPos@{getPos}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getPos()}{getPos()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Transform\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transform_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_transform_8cpp_source}{Transform.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030 \{}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{return} (\_pos);}
+\DoxyCodeLine{00032 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_transform_ab15164f1690929c45e636514c0dafb7f}\label{class_transform_ab15164f1690929c45e636514c0dafb7f}} 
+\index{Transform@{Transform}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getRotation()}{getRotation()}}
+{\footnotesize\ttfamily float Transform\+::get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transform_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{_transform_8cpp_source}{Transform.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040 \{}
+\DoxyCodeLine{00041     \textcolor{keywordflow}{return} (\_rotation);}
+\DoxyCodeLine{00042 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_transform_a032dc2eb15f8609a976d5846489698fe}\label{class_transform_a032dc2eb15f8609a976d5846489698fe}} 
+\index{Transform@{Transform}!getScale@{getScale}}
+\index{getScale@{getScale}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Transform\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transform_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{_transform_8cpp_source}{Transform.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035 \{}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{return} (\_scale);}
+\DoxyCodeLine{00037 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_transform_a9dc505a9d9d9b7c7b46e416713ebc83a}\label{class_transform_a9dc505a9d9d9b7c7b46e416713ebc83a}} 
+\index{Transform@{Transform}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Transform\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transform_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{_transform_8cpp_source}{Transform.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015 \{}
+\DoxyCodeLine{00016     \_pos = pos;}
+\DoxyCodeLine{00017 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_transform_aef821c00885810e430f61b274a6089db}\label{class_transform_aef821c00885810e430f61b274a6089db}} 
+\index{Transform@{Transform}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily void Transform\+::set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{rotation }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transform_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{_transform_8cpp_source}{Transform.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025 \{}
+\DoxyCodeLine{00026     \_rotation = rotation;}
+\DoxyCodeLine{00027 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_transform_a505af70c348c16baef7ba9bed19e3ca1}\label{class_transform_a505af70c348c16baef7ba9bed19e3ca1}} 
+\index{Transform@{Transform}!setScale@{setScale}}
+\index{setScale@{setScale}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily void Transform\+::set\+Scale (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{scale }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transform_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{_transform_8cpp_source}{Transform.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020 \{}
+\DoxyCodeLine{00021     \_scale = scale;}
+\DoxyCodeLine{00022 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/\+Game/Transform.\+hpp\item 
+Client/src/\+Game/Transform.\+cpp\end{DoxyCompactItemize}

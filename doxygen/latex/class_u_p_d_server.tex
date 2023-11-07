@@ -1,0 +1,69 @@
+\hypertarget{class_u_p_d_server}{}\doxysection{UPDServer Class Reference}
+\label{class_u_p_d_server}\index{UPDServer@{UPDServer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_p_d_server_afb68210c16559ad5931abb04db4b71e5}{UPDServer}} (boost\+::asio\+::io\+\_\+context \&io\+\_\+context, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_client_manager}{Client\+Manager}} $>$ client\+Manager)
+\item 
+void \mbox{\hyperlink{class_u_p_d_server_afa2207e5609377342c735a26a8b384b2}{send\+To\+Client}} (const boost\+::asio\+::ip\+::udp\+::endpoint \&client, const std\+::string \&message)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_u_d_p_server_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{_u_d_p_server_8hpp_source}{UDPServer.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_p_d_server_afb68210c16559ad5931abb04db4b71e5}\label{class_u_p_d_server_afb68210c16559ad5931abb04db4b71e5}} 
+\index{UPDServer@{UPDServer}!UPDServer@{UPDServer}}
+\index{UPDServer@{UPDServer}!UPDServer@{UPDServer}}
+\doxysubsubsection{\texorpdfstring{UPDServer()}{UPDServer()}}
+{\footnotesize\ttfamily UPDServer\+::\+UPDServer (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+context \&}]{io\+\_\+context,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_client_manager}{Client\+Manager}} $>$}]{client\+Manager }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_u_d_p_server_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_u_d_p_server_8cpp_source}{UDPServer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011     : \_io\_context(io\_context), \_clientManager(clientManager),}
+\DoxyCodeLine{00012     socket\_(io\_context, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), 54321))}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014     start\_receive();}
+\DoxyCodeLine{00015 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_p_d_server_afa2207e5609377342c735a26a8b384b2}\label{class_u_p_d_server_afa2207e5609377342c735a26a8b384b2}} 
+\index{UPDServer@{UPDServer}!sendToClient@{sendToClient}}
+\index{sendToClient@{sendToClient}!UPDServer@{UPDServer}}
+\doxysubsubsection{\texorpdfstring{sendToClient()}{sendToClient()}}
+{\footnotesize\ttfamily void UPDServer\+::send\+To\+Client (\begin{DoxyParamCaption}\item[{const boost\+::asio\+::ip\+::udp\+::endpoint \&}]{client,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_u_d_p_server_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_u_d_p_server_8cpp_source}{UDPServer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017                                                                                            \{}
+\DoxyCodeLine{00018     socket\_.async\_send\_to(boost::asio::buffer(message), client,}
+\DoxyCodeLine{00019         [\textcolor{keyword}{this}](\textcolor{keyword}{const} boost::system::error\_code\& ec, std::size\_t size) \{}
+\DoxyCodeLine{00020             \textcolor{keywordflow}{if} (ec)}
+\DoxyCodeLine{00021                 std::cerr << \textcolor{stringliteral}{"{}Error: "{}} << ec.message() << std::endl;}
+\DoxyCodeLine{00022         \}}
+\DoxyCodeLine{00023     );}
+\DoxyCodeLine{00024 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Server/include/UDPServer.\+hpp\item 
+Server/src/\+Networking/UDPServer.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{_t_queue_8cpp_source}{}\doxysection{TQueue.\+cpp}
+\label{_t_queue_8cpp_source}\index{Client/src/Network/TQueue.cpp@{Client/src/Network/TQueue.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00002}00002 \textcolor{comment}{** EPITECH PROJECT, 2023}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00003}00003 \textcolor{comment}{** Untitled (Workspace)}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00004}00004 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00005}00005 \textcolor{comment}{** TQueue.cpp}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00006}00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}TQueue.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00010}00010 \textcolor{keyword}{namespace }network \{}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00011}00011         message \&TQueue::front()}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00012}00012         \{}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00013}00013             std::scoped\_lock<std::mutex> lock(\_mutex);}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00014}00014             \textcolor{keywordflow}{return} \_queue.front();}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00015}00015         \}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00017}00017         \textcolor{keywordtype}{void} TQueue::push\_back(\textcolor{keyword}{const} message \&msg)}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00018}00018         \{}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00019}00019             std::scoped\_lock<std::mutex> lock(\_mutex);}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00020}00020             \_queue.emplace\_back(std::move(msg));}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00021}00021         \}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00023}00023         \textcolor{keywordtype}{size\_t} TQueue::size()}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00024}00024         \{}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00025}00025             std::scoped\_lock lock(\_mutex);}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00026}00026             \textcolor{keywordflow}{return} \_queue.size();}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00027}00027         \}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00028}00028     }
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00029}00029         \textcolor{keywordtype}{bool} TQueue::empty()}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00030}00030         \{}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00031}00031             std::scoped\_lock lock(\_mutex);}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00032}00032             \textcolor{keywordflow}{return} \_queue.empty();}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00033}00033         \}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00035}00035         \textcolor{keywordtype}{void} TQueue::clear()}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00036}00036         \{}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00037}00037             std::scoped\_lock<std::mutex> lock(\_mutex);}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00038}00038             \_queue.clear();}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00039}00039         \}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00041}00041         message TQueue::pop\_front()}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00042}00042         \{}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00043}00043             std::scoped\_lock lock(\_mutex);}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00044}00044             \textcolor{keyword}{auto} msg = std::move(\_queue.front());}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00045}00045             \_queue.pop\_front();}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00046}00046             \textcolor{keywordflow}{return} msg;}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00047}00047         \}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00049}00049         message TQueue::pop\_back()}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00050}00050         \{}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00051}00051             std::scoped\_lock lock(\_mutex);}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00052}00052             \textcolor{keyword}{auto} msg = std::move(\_queue.back());}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00053}00053             \_queue.pop\_back();}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00054}00054             \textcolor{keywordflow}{return} msg;}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00055}00055         \}}
+\DoxyCodeLine{\Hypertarget{_t_queue_8cpp_source_l00056}00056 \}}
+
+\end{DoxyCode}

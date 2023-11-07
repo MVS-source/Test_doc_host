@@ -1,0 +1,46 @@
+\hypertarget{_menu_8hpp_source}{}\doxysection{Menu.\+hpp}
+\label{_menu_8hpp_source}\index{Client/include/Menu.hpp@{Client/include/Menu.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00002}00002 \textcolor{comment}{** EPITECH PROJECT, 2023}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00003}00003 \textcolor{comment}{** Untitled (Workspace)}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00004}00004 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00005}00005 \textcolor{comment}{** Menu.hpp}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00006}00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00008}00008 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00009}00009 \textcolor{preprocessor}{    \#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00010}00010 \textcolor{preprocessor}{    \#include <string>}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00011}00011 \textcolor{preprocessor}{    \#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00012}00012 \textcolor{preprocessor}{    \#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00013}00013 \textcolor{preprocessor}{    \#include "{}../Box/PromptBox.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00014}00014 \textcolor{preprocessor}{    \#include "{}GameObject.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00015}00015 \textcolor{preprocessor}{    \#include "{}Music.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00016}00016 \textcolor{preprocessor}{    \#include <regex>}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00017}00017 \textcolor{preprocessor}{    \#include "{}Button.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00018}00018 \textcolor{preprocessor}{    \#include <functional>}}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00021}\mbox{\hyperlink{class_menu}{00021}} \textcolor{keyword}{class }\mbox{\hyperlink{class_menu}{Menu}} \{}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00022}00022     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00023}00023         \mbox{\hyperlink{class_menu}{Menu}}(sf::VideoMode videoMode);}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00024}00024         \textcolor{keywordtype}{void} run();}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00025}00025         \textcolor{keywordtype}{bool} checkConnection();}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00026}00026     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00027}00027         \textcolor{keywordtype}{void} drawMenu();}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00028}00028         \textcolor{keywordtype}{void} menuEvents();}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00030}00030         sf::RenderWindow \_window;}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00031}00031         \mbox{\hyperlink{class_music}{Music}} \_music;}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00032}00032         \mbox{\hyperlink{class_game_object}{GameObject}} \_background;}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00033}00033         \mbox{\hyperlink{class_game_object}{GameObject}} \_title;}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00034}00034         \textcolor{keywordtype}{bool} \_connect;}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00035}00035         \mbox{\hyperlink{class_button}{Button}} \_play;}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00036}00036         sf::Font \_font;}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00037}00037         sf::Font loadFont();}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00038}00038         \mbox{\hyperlink{class_prompt_box}{PromptBox}} \_userName;}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00039}00039         std::string formatIP();}
+\DoxyCodeLine{\Hypertarget{_menu_8hpp_source_l00040}00040 \};}
+
+\end{DoxyCode}

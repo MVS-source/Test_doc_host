@@ -1,0 +1,160 @@
+\hypertarget{class_rigid_body}{}\doxysection{Rigid\+Body Class Reference}
+\label{class_rigid_body}\index{RigidBody@{RigidBody}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rigid_body_a53494bc190a696f176d66477a41a861e}{Rigid\+Body}} (sf\+::\+Vector2f pos=\{0, 0\}, sf\+::\+Vector2f vel=\{0, 0\}, sf\+::\+Float\+Rect collider=\{0, 0, 0, 0\})
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_rigid_body_a704b048b283956ec676f112ed30f746c}{get\+Position}} ()
+\item 
+void \mbox{\hyperlink{class_rigid_body_aaec741648011b4c774a251f924efca33}{set\+Position}} (sf\+::\+Vector2f pos)
+\item 
+void \mbox{\hyperlink{class_rigid_body_a20ca4ab370a616f09d822ed5788387e3}{set\+Velocity}} (sf\+::\+Vector2f vel)
+\item 
+void \mbox{\hyperlink{class_rigid_body_af78d7962e6be47e29df10f2da7dd3801}{set\+Collider}} (sf\+::\+Float\+Rect collider)
+\item 
+bool \mbox{\hyperlink{class_rigid_body_aefbccda20fa9040a1093f1284c735c79}{is\+Colliding}} (const \mbox{\hyperlink{class_rigid_body}{Rigid\+Body}} \&other)
+\item 
+bool \mbox{\hyperlink{class_rigid_body_a7b5f74753b851922d792921e38f0d638}{contains}} (sf\+::\+Vector2f pos)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_rigid_body_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{_rigid_body_8hpp_source}{Rigid\+Body.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rigid_body_a53494bc190a696f176d66477a41a861e}\label{class_rigid_body_a53494bc190a696f176d66477a41a861e}} 
+\index{RigidBody@{RigidBody}!RigidBody@{RigidBody}}
+\index{RigidBody@{RigidBody}!RigidBody@{RigidBody}}
+\doxysubsubsection{\texorpdfstring{RigidBody()}{RigidBody()}}
+{\footnotesize\ttfamily Rigid\+Body\+::\+Rigid\+Body (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos = {\ttfamily \{0,~0\}},  }\item[{sf\+::\+Vector2f}]{vel = {\ttfamily \{0,~0\}},  }\item[{sf\+::\+Float\+Rect}]{collider = {\ttfamily \{0,~0,~0,~0\}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rigid_body_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_rigid_body_8cpp_source}{Rigid\+Body.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011 : \_vel(vel), \_collider(collider)}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     \_collider.left = pos.x;}
+\DoxyCodeLine{00014     \_collider.top = pos.y;}
+\DoxyCodeLine{00015 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rigid_body_a7b5f74753b851922d792921e38f0d638}\label{class_rigid_body_a7b5f74753b851922d792921e38f0d638}} 
+\index{RigidBody@{RigidBody}!contains@{contains}}
+\index{contains@{contains}!RigidBody@{RigidBody}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool Rigid\+Body\+::contains (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rigid_body_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{_rigid_body_8cpp_source}{Rigid\+Body.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044 \{}
+\DoxyCodeLine{00045     \textcolor{keywordflow}{return} (\_collider.contains(pos));}
+\DoxyCodeLine{00046 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_rigid_body_a704b048b283956ec676f112ed30f746c}\label{class_rigid_body_a704b048b283956ec676f112ed30f746c}} 
+\index{RigidBody@{RigidBody}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!RigidBody@{RigidBody}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Rigid\+Body\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rigid_body_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_rigid_body_8cpp_source}{Rigid\+Body.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018 \{}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{return} (sf::Vector2f\{\_collider.left, \_collider.top\});}
+\DoxyCodeLine{00020 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_rigid_body_aefbccda20fa9040a1093f1284c735c79}\label{class_rigid_body_aefbccda20fa9040a1093f1284c735c79}} 
+\index{RigidBody@{RigidBody}!isColliding@{isColliding}}
+\index{isColliding@{isColliding}!RigidBody@{RigidBody}}
+\doxysubsubsection{\texorpdfstring{isColliding()}{isColliding()}}
+{\footnotesize\ttfamily bool Rigid\+Body\+::is\+Colliding (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_rigid_body}{Rigid\+Body}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rigid_body_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_rigid_body_8cpp_source}{Rigid\+Body.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039 \{}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{return} (\_collider.intersects(other.\_collider));}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_rigid_body_af78d7962e6be47e29df10f2da7dd3801}\label{class_rigid_body_af78d7962e6be47e29df10f2da7dd3801}} 
+\index{RigidBody@{RigidBody}!setCollider@{setCollider}}
+\index{setCollider@{setCollider}!RigidBody@{RigidBody}}
+\doxysubsubsection{\texorpdfstring{setCollider()}{setCollider()}}
+{\footnotesize\ttfamily void Rigid\+Body\+::set\+Collider (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{collider }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rigid_body_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{_rigid_body_8cpp_source}{Rigid\+Body.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034 \{}
+\DoxyCodeLine{00035     \_collider = collider;}
+\DoxyCodeLine{00036 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_rigid_body_aaec741648011b4c774a251f924efca33}\label{class_rigid_body_aaec741648011b4c774a251f924efca33}} 
+\index{RigidBody@{RigidBody}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!RigidBody@{RigidBody}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Rigid\+Body\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rigid_body_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{_rigid_body_8cpp_source}{Rigid\+Body.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023 \{}
+\DoxyCodeLine{00024     \_collider.left = pos.x;}
+\DoxyCodeLine{00025     \_collider.top = pos.y;}
+\DoxyCodeLine{00026 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_rigid_body_a20ca4ab370a616f09d822ed5788387e3}\label{class_rigid_body_a20ca4ab370a616f09d822ed5788387e3}} 
+\index{RigidBody@{RigidBody}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!RigidBody@{RigidBody}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily void Rigid\+Body\+::set\+Velocity (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{vel }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_rigid_body_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_rigid_body_8cpp_source}{Rigid\+Body.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029 \{}
+\DoxyCodeLine{00030     \_vel = vel;}
+\DoxyCodeLine{00031 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/\+Game/Rigid\+Body.\+hpp\item 
+Client/src/\+Game/Rigid\+Body.\+cpp\end{DoxyCompactItemize}

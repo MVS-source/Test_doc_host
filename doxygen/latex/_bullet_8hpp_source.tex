@@ -1,0 +1,28 @@
+\hypertarget{_bullet_8hpp_source}{}\doxysection{Bullet.\+hpp}
+\label{_bullet_8hpp_source}\index{Client/include/Game/Bullet.hpp@{Client/include/Game/Bullet.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00002}00002 \textcolor{comment}{** EPITECH PROJECT, 2023}}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00003}00003 \textcolor{comment}{** Untitled (Workspace)}}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00004}00004 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00005}00005 \textcolor{comment}{** Bullet.hpp}}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00006}00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00008}00008 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00009}00009 \textcolor{preprocessor}{    \#include "{}Unit.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00011}\mbox{\hyperlink{class_bullet}{00011}} \textcolor{keyword}{class }\mbox{\hyperlink{class_bullet}{Bullet}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_unit}{Unit}} \{}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00012}00012     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00013}00013         \mbox{\hyperlink{class_bullet}{Bullet}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_drawable_params}{DrawableParams}} \&Drawableparams, \textcolor{keyword}{const} \mbox{\hyperlink{struct_rigid_body_params}{RigidBodyParams}} \&rigidBodyParams, \textcolor{keyword}{const} std::string \&path = SHOOT);}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00014}00014         \mbox{\hyperlink{class_bullet}{\string~Bullet}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00016}00016         \textcolor{keywordtype}{void} update(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00017}00017         \textcolor{keywordtype}{void} draw(sf::RenderWindow \&window);}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00019}00019         sf::Vector2f getPosition();}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00020}00020     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00021}00021         \textcolor{keywordtype}{float} \_speed = 750.0f;}
+\DoxyCodeLine{\Hypertarget{_bullet_8hpp_source_l00022}00022 \};}
+
+\end{DoxyCode}

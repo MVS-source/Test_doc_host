@@ -1,0 +1,31 @@
+\hypertarget{_prompt_box_8hpp_source}{}\doxysection{Prompt\+Box.\+hpp}
+\label{_prompt_box_8hpp_source}\index{Client/include/Box/PromptBox.hpp@{Client/include/Box/PromptBox.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00002}00002 \textcolor{comment}{** EPITECH PROJECT, 2023}}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00003}00003 \textcolor{comment}{** Untitled (Workspace)}}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00004}00004 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00005}00005 \textcolor{comment}{** PromptBox.hpp}}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00006}00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00008}00008 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00009}00009 \textcolor{preprocessor}{    \#include "{}IBox.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00011}\mbox{\hyperlink{class_prompt_box}{00011}} \textcolor{keyword}{class }\mbox{\hyperlink{class_prompt_box}{PromptBox}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_i_box}{IBox}} \{}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00012}00012     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00013}00013         \mbox{\hyperlink{class_prompt_box}{PromptBox}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00014}00014         \mbox{\hyperlink{class_prompt_box}{PromptBox}}(sf::Vector2f pos, sf::Vector2f size, std::string prompt, sf::Font \&font);}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00015}00015         \mbox{\hyperlink{class_prompt_box}{PromptBox}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_prompt_box}{PromptBox}} \&other);}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00017}00017         \mbox{\hyperlink{class_prompt_box}{PromptBox}} operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_prompt_box}{PromptBox}} \&other);}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00018}00018         \textcolor{keywordtype}{void} prompt(sf::Keyboard::Key key, \textcolor{keywordtype}{int} limit);}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00019}00019         \textcolor{keywordtype}{void} switchPrompt(sf::Vector2i mousePos);}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00020}00020         std::string getUserInput();}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00021}00021     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00022}00022         std::string \_basePrompt;}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00023}00023         \textcolor{keywordtype}{bool} \_promptState;}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00024}00024         sf::String \_userInput;}
+\DoxyCodeLine{\Hypertarget{_prompt_box_8hpp_source_l00025}00025 \};}
+
+\end{DoxyCode}

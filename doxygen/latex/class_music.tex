@@ -1,0 +1,139 @@
+\hypertarget{class_music}{}\doxysection{Music Class Reference}
+\label{class_music}\index{Music@{Music}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_music_a3ed0734c9484dd16a9dc26ebda63fe2c}{Music}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{class_music_a54b941f6f7634d7f99b473c78fe6e4da}{play}} ()
+\item 
+void \mbox{\hyperlink{class_music_a008211b514c1c89c15399d3384d3fcea}{stop}} ()
+\item 
+void \mbox{\hyperlink{class_music_a677a406c2e250361425cdc2239b24129}{set\+Volume}} (float volume)
+\item 
+void \mbox{\hyperlink{class_music_af1477743fe427073f28b3e39c8275cf0}{repeat}} (bool repeat)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Music \mbox{\hyperlink{class_music_ad25f59fc5d201ae1a3709fda434cb824}{\+\_\+music}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_music_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{_music_8hpp_source}{Music.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_music_a3ed0734c9484dd16a9dc26ebda63fe2c}\label{class_music_a3ed0734c9484dd16a9dc26ebda63fe2c}} 
+\index{Music@{Music}!Music@{Music}}
+\index{Music@{Music}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{Music()}{Music()}}
+{\footnotesize\ttfamily Music\+::\+Music (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_music_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_music_8cpp_source}{Music.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011 \{}
+\DoxyCodeLine{00012    \textcolor{keywordflow}{if} (!\_music.openFromFile(path))}
+\DoxyCodeLine{00013        \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}Music: Can't open file"{}});}
+\DoxyCodeLine{00014 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_music_a54b941f6f7634d7f99b473c78fe6e4da}\label{class_music_a54b941f6f7634d7f99b473c78fe6e4da}} 
+\index{Music@{Music}!play@{play}}
+\index{play@{play}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Music\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_music_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_music_8cpp_source}{Music.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017 \{}
+\DoxyCodeLine{00018     \_music.stop();}
+\DoxyCodeLine{00019     \_music.play();}
+\DoxyCodeLine{00020 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_music_af1477743fe427073f28b3e39c8275cf0}\label{class_music_af1477743fe427073f28b3e39c8275cf0}} 
+\index{Music@{Music}!repeat@{repeat}}
+\index{repeat@{repeat}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{repeat()}{repeat()}}
+{\footnotesize\ttfamily void Music\+::repeat (\begin{DoxyParamCaption}\item[{bool}]{repeat }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_music_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_music_8cpp_source}{Music.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033 \{}
+\DoxyCodeLine{00034     \_music.setLoop(repeat);}
+\DoxyCodeLine{00035 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_music_a677a406c2e250361425cdc2239b24129}\label{class_music_a677a406c2e250361425cdc2239b24129}} 
+\index{Music@{Music}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily void Music\+::set\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_music_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_music_8cpp_source}{Music.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028 \{}
+\DoxyCodeLine{00029     \_music.setVolume(volume);}
+\DoxyCodeLine{00030 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_music_a008211b514c1c89c15399d3384d3fcea}\label{class_music_a008211b514c1c89c15399d3384d3fcea}} 
+\index{Music@{Music}!stop@{stop}}
+\index{stop@{stop}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Music\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_music_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{_music_8cpp_source}{Music.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023 \{}
+\DoxyCodeLine{00024     \_music.stop();}
+\DoxyCodeLine{00025 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_music_ad25f59fc5d201ae1a3709fda434cb824}\label{class_music_ad25f59fc5d201ae1a3709fda434cb824}} 
+\index{Music@{Music}!\_music@{\_music}}
+\index{\_music@{\_music}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{\_music}{\_music}}
+{\footnotesize\ttfamily sf\+::\+Music Music\+::\+\_\+music\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_music_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_music_8hpp_source}{Music.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/Music.\+hpp\item 
+Client/src/Music.\+cpp\end{DoxyCompactItemize}

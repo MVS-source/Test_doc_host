@@ -1,0 +1,125 @@
+\hypertarget{class_bullet}{}\doxysection{Bullet Class Reference}
+\label{class_bullet}\index{Bullet@{Bullet}}
+
+
+Inheritance diagram for Bullet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=125pt]{class_bullet__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bullet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_bullet__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bullet_ab411ffe4ac460f5ebfebf00c46212d31}{Bullet}} (const \mbox{\hyperlink{struct_drawable_params}{Drawable\+Params}} \&Drawableparams, const \mbox{\hyperlink{struct_rigid_body_params}{Rigid\+Body\+Params}} \&rigid\+Body\+Params, const std\+::string \&path=SHOOT)
+\item 
+void \mbox{\hyperlink{class_bullet_acb4f49c359e8bbb5823597fd743aa098}{update}} (float dt)
+\item 
+void \mbox{\hyperlink{class_bullet_aa128a7449171a208a057a73a19ec2837}{draw}} (sf\+::\+Render\+Window \&window)
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_bullet_a64e4ce634f62ab31d338bd142c1987c9}{get\+Position}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_bullet_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{_bullet_8hpp_source}{Bullet.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bullet_ab411ffe4ac460f5ebfebf00c46212d31}\label{class_bullet_ab411ffe4ac460f5ebfebf00c46212d31}} 
+\index{Bullet@{Bullet}!Bullet@{Bullet}}
+\index{Bullet@{Bullet}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{Bullet()}{Bullet()}}
+{\footnotesize\ttfamily Bullet\+::\+Bullet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_drawable_params}{Drawable\+Params}} \&}]{Drawableparams,  }\item[{const \mbox{\hyperlink{struct_rigid_body_params}{Rigid\+Body\+Params}} \&}]{rigid\+Body\+Params,  }\item[{const std\+::string \&}]{path = {\ttfamily SHOOT} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_bullet_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_bullet_8cpp_source}{Bullet.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011 : \mbox{\hyperlink{class_unit}{Unit}}(path, Drawableparams, rigidBodyParams)}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     \_rigidBody.setPosition(Drawableparams.pos);}
+\DoxyCodeLine{00014 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bullet_aa128a7449171a208a057a73a19ec2837}\label{class_bullet_aa128a7449171a208a057a73a19ec2837}} 
+\index{Bullet@{Bullet}!draw@{draw}}
+\index{draw@{draw}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Bullet\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_bullet_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{_bullet_8cpp_source}{Bullet.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025 \{}
+\DoxyCodeLine{00026     \_drawable.draw(window);}
+\DoxyCodeLine{00027 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bullet_a64e4ce634f62ab31d338bd142c1987c9}\label{class_bullet_a64e4ce634f62ab31d338bd142c1987c9}} 
+\index{Bullet@{Bullet}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Bullet\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_bullet_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_bullet_8cpp_source}{Bullet.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030 \{}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{return} (\_rigidBody.getPosition());}
+\DoxyCodeLine{00032 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_bullet_acb4f49c359e8bbb5823597fd743aa098}\label{class_bullet_acb4f49c359e8bbb5823597fd743aa098}} 
+\index{Bullet@{Bullet}!update@{update}}
+\index{update@{update}!Bullet@{Bullet}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Bullet\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_bullet_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_bullet_8cpp_source}{Bullet.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017 \{}
+\DoxyCodeLine{00018     sf::Vector2f position = \_rigidBody.getPosition();}
+\DoxyCodeLine{00019     position.x += \_speed * dt;}
+\DoxyCodeLine{00020     \_rigidBody.setPosition(position);}
+\DoxyCodeLine{00021     \_drawable.setParams(position, \_drawable.getSprite().getScale(), \_drawable.getSprite().getRotation());}
+\DoxyCodeLine{00022 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/\+Game/Bullet.\+hpp\item 
+Client/src/\+Game/Bullet.\+cpp\end{DoxyCompactItemize}

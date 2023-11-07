@@ -1,0 +1,58 @@
+\hypertarget{_t_c_p_server_8hpp_source}{}\doxysection{TCPServer.\+hpp}
+\label{_t_c_p_server_8hpp_source}\index{Server/include/TCPServer.hpp@{Server/include/TCPServer.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00002}00002 \textcolor{comment}{** EPITECH PROJECT, 2023}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00003}00003 \textcolor{comment}{** Untitled (Workspace)}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00004}00004 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00005}00005 \textcolor{comment}{** TCPServer.hpp}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00006}00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00008}00008 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00009}00009 \textcolor{preprocessor}{    \#include <boost/asio.hpp>}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00010}00010 \textcolor{preprocessor}{    \#include <boost/bind/bind.hpp>}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00011}00011 \textcolor{preprocessor}{    \#include <boost/shared\_ptr.hpp>}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00012}00012 \textcolor{preprocessor}{    \#include <boost/enable\_shared\_from\_this.hpp>}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00013}00013 \textcolor{preprocessor}{    \#include <string>}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00014}00014 \textcolor{preprocessor}{    \#include <ctime>}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00015}00015 \textcolor{preprocessor}{    \#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00016}00016 \textcolor{preprocessor}{    \#include "{}ClientManager.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00018}\mbox{\hyperlink{class_t_c_p_connection}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{class_t_c_p_connection}{TCPConnection}} : \textcolor{keyword}{public} boost::enable\_shared\_from\_this<TCPConnection> \{}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00019}00019     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00020}00020         \textcolor{keyword}{typedef} boost::shared\_ptr<TCPConnection> pointer;}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00022}00022         \textcolor{keyword}{static} pointer create(boost::asio::io\_context\& io\_context);}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00023}00023         boost::asio::ip::tcp::socket\& socket();}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00025}00025     \textcolor{keywordtype}{void} start();}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00027}00027     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00028}00028         \mbox{\hyperlink{class_t_c_p_connection}{TCPConnection}}(boost::asio::io\_context\& io\_context);}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00029}00029         \textcolor{keywordtype}{void} start\_read();}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00031}00031         \textcolor{keywordtype}{void} handle\_write();}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00032}00032         \textcolor{keywordtype}{void} handle\_read(\textcolor{keyword}{const} boost::system::error\_code\& error, \textcolor{keywordtype}{size\_t} bytes\_transferred);}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00034}00034         boost::asio::ip::tcp::socket \_socket;}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00035}00035         std::string \_message;}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00036}00036         \textcolor{keywordtype}{char} \_data[1024];}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00037}00037 \};}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00039}\mbox{\hyperlink{class_t_c_p_server}{00039}} \textcolor{keyword}{class }\mbox{\hyperlink{class_t_c_p_server}{TCPServer}} \{}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00040}00040     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00041}00041         \mbox{\hyperlink{class_t_c_p_server}{TCPServer}}(boost::asio::io\_context\& io\_context, std::shared\_ptr<ClientManager> clientManager);}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00043}00043         \textcolor{keywordtype}{void} sendToClient(\textcolor{keyword}{const} TCPConnection::pointer\& client, \textcolor{keyword}{const} std::string\& message);}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00044}00044     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00045}00045         \textcolor{keywordtype}{void} start\_accept();}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00047}00047         \textcolor{keywordtype}{void} handle\_accept(TCPConnection::pointer new\_connection, \textcolor{keyword}{const} boost::system::error\_code\& error);}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00049}00049         boost::asio::io\_context\& \_io\_context;}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00050}00050         std::shared\_ptr<ClientManager> \_clientManager;}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00051}00051         boost::asio::ip::tcp::acceptor \_acceptor;}
+\DoxyCodeLine{\Hypertarget{_t_c_p_server_8hpp_source_l00052}00052 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,109 @@
+\hypertarget{class_animation}{}\doxysection{Animation Class Reference}
+\label{class_animation}\index{Animation@{Animation}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_animation_a6353d585c4a1aa26cfbc6ee24d314969}{Animation}} (sf\+::\+Texture $\ast$texture, sf\+::\+Vector2u image\+Count, float switch\+Time)
+\item 
+void \mbox{\hyperlink{class_animation_ac88cf20529c8de49c5e1f12c6a18f93b}{update}} (int row, float delta\+Time)
+\item 
+const sf\+::\+Int\+Rect \mbox{\hyperlink{class_animation_a0401ea093b1d69b19e699ae4ac408cd2}{get\+Rect}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_animation_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{_animation_8hpp_source}{Animation.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_animation_a6353d585c4a1aa26cfbc6ee24d314969}\label{class_animation_a6353d585c4a1aa26cfbc6ee24d314969}} 
+\index{Animation@{Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Animation()}{Animation()}}
+{\footnotesize\ttfamily Animation\+::\+Animation (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{texture,  }\item[{sf\+::\+Vector2u}]{image\+Count,  }\item[{float}]{switch\+Time }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_animation_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_animation_8cpp_source}{Animation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010                                                                                 :}
+\DoxyCodeLine{00011 \_imageCount(imageCount), \_switchTime(switchTime), \_totalTime(0.0f), \_currImage(\{0, 0\})}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     \_irect.width = texture-\/>getSize().x / float(imageCount.x);}
+\DoxyCodeLine{00014     \_irect.height = texture-\/>getSize().y / float(imageCount.y);}
+\DoxyCodeLine{00015 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_animation_a401b68793d4fbf48d481c030ee4b2a16}\label{class_animation_a401b68793d4fbf48d481c030ee4b2a16}} 
+\index{Animation@{Animation}!````~Animation@{$\sim$Animation}}
+\index{````~Animation@{$\sim$Animation}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{$\sim$Animation()}{~Animation()}}
+{\footnotesize\ttfamily Animation\+::$\sim$\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_animation_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_animation_8cpp_source}{Animation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_animation_a0401ea093b1d69b19e699ae4ac408cd2}\label{class_animation_a0401ea093b1d69b19e699ae4ac408cd2}} 
+\index{Animation@{Animation}!getRect@{getRect}}
+\index{getRect@{getRect}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{getRect()}{getRect()}}
+{\footnotesize\ttfamily const sf\+::\+Int\+Rect Animation\+::get\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_animation_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{_animation_8cpp_source}{Animation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036 \{}
+\DoxyCodeLine{00037     \textcolor{keywordflow}{return} \_irect;}
+\DoxyCodeLine{00038 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_animation_ac88cf20529c8de49c5e1f12c6a18f93b}\label{class_animation_ac88cf20529c8de49c5e1f12c6a18f93b}} 
+\index{Animation@{Animation}!update@{update}}
+\index{update@{update}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Animation\+::update (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_animation_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_animation_8cpp_source}{Animation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022     \_currImage.y = row;}
+\DoxyCodeLine{00023     \_totalTime += deltaTime;}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     \textcolor{keywordflow}{if} (\_totalTime >= \_switchTime) \{}
+\DoxyCodeLine{00026         \_totalTime -\/= \_switchTime;}
+\DoxyCodeLine{00027         \_currImage.x++;}
+\DoxyCodeLine{00028         \textcolor{keywordflow}{if} (\_currImage.x >= \_imageCount.x)}
+\DoxyCodeLine{00029             \_currImage.x = 0;}
+\DoxyCodeLine{00030     \}}
+\DoxyCodeLine{00031     \_irect.left = \_currImage.x * \_irect.width;}
+\DoxyCodeLine{00032     \_irect.top = \_currImage.y * \_irect.height;}
+\DoxyCodeLine{00033 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/\+Game/Animation.\+hpp\item 
+Client/src/\+Game/Animation.\+cpp\end{DoxyCompactItemize}

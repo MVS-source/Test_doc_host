@@ -1,0 +1,99 @@
+\hypertarget{class_background}{}\doxysection{Background Class Reference}
+\label{class_background}\index{Background@{Background}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_background_ae3d10fe0882df48b0e1e861a7e69f37f}{draw}} (sf\+::\+Render\+Window \&window)
+\item 
+void \mbox{\hyperlink{class_background_af110c9b911e24f68dff5ed961f5478d1}{parallax}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_background_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{_background_8hpp_source}{Background.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_background_a05b686e4ce0cbdb3b1fa14a93fdf98a1}\label{class_background_a05b686e4ce0cbdb3b1fa14a93fdf98a1}} 
+\index{Background@{Background}!Background@{Background}}
+\index{Background@{Background}!Background@{Background}}
+\doxysubsubsection{\texorpdfstring{Background()}{Background()}}
+{\footnotesize\ttfamily Background\+::\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_background_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_background_8cpp_source}{Background.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010                        :}
+\DoxyCodeLine{00011 \_background1(GBACKGROUND, \{0, 0\}), \_background2(GBACKGROUND, \{1300, 0\}),}
+\DoxyCodeLine{00012 \_parallax\_close(PARALLAX\_CLOSE, \{300, 300\}),}
+\DoxyCodeLine{00013 \_parallax\_far(PARALLAX\_FAR, \{600, 200\}), \_clock(sf::Clock())}
+\DoxyCodeLine{00014 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_background_ae3d10fe0882df48b0e1e861a7e69f37f}\label{class_background_ae3d10fe0882df48b0e1e861a7e69f37f}} 
+\index{Background@{Background}!draw@{draw}}
+\index{draw@{draw}!Background@{Background}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Background\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_background_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_background_8cpp_source}{Background.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017 \{}
+\DoxyCodeLine{00018     \_background1.draw(window);}
+\DoxyCodeLine{00019     \_background2.draw(window);}
+\DoxyCodeLine{00020     \_parallax\_close.draw(window);}
+\DoxyCodeLine{00021     \_parallax\_far.draw(window);}
+\DoxyCodeLine{00022 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_background_af110c9b911e24f68dff5ed961f5478d1}\label{class_background_af110c9b911e24f68dff5ed961f5478d1}} 
+\index{Background@{Background}!parallax@{parallax}}
+\index{parallax@{parallax}!Background@{Background}}
+\doxysubsubsection{\texorpdfstring{parallax()}{parallax()}}
+{\footnotesize\ttfamily void Background\+::parallax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_background_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{_background_8cpp_source}{Background.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025 \{}
+\DoxyCodeLine{00026     sf::Time time = \_clock.getElapsedTime();}
+\DoxyCodeLine{00027     \textcolor{keywordflow}{if} (time > sf::milliseconds(10)) \{}
+\DoxyCodeLine{00028         \_background1.getSprite().move(-\/0.5, 0);}
+\DoxyCodeLine{00029         \_background2.getSprite().move(-\/0.5, 0);}
+\DoxyCodeLine{00030         \_parallax\_close.getSprite().move(-\/0.4, 0);}
+\DoxyCodeLine{00031         \_parallax\_far.getSprite().move(-\/0.3, 0);}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{if} (\_parallax\_close.getSprite().getPosition().x < -\/200)}
+\DoxyCodeLine{00033             \_parallax\_close.getSprite().setPosition(1300, 300);}
+\DoxyCodeLine{00034         \textcolor{keywordflow}{if} (\_parallax\_far.getSprite().getPosition().x < -\/300)}
+\DoxyCodeLine{00035             \_parallax\_far.getSprite().setPosition(1300, 200);}
+\DoxyCodeLine{00036         \textcolor{keywordflow}{if} (\_background1.getSprite().getPosition().x < -\/1300)}
+\DoxyCodeLine{00037             \_background1.getSprite().setPosition(1300, 0);}
+\DoxyCodeLine{00038         \textcolor{keywordflow}{if} (\_background2.getSprite().getPosition().x < -\/1300)}
+\DoxyCodeLine{00039             \_background2.getSprite().setPosition(1300, 0);}
+\DoxyCodeLine{00040         \_clock.restart();}
+\DoxyCodeLine{00041     \}}
+\DoxyCodeLine{00042 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/\+Game/Background.\+hpp\item 
+Client/src/\+Game/Background.\+cpp\end{DoxyCompactItemize}

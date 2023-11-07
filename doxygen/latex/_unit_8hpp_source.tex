@@ -1,0 +1,31 @@
+\hypertarget{_unit_8hpp_source}{}\doxysection{Unit.\+hpp}
+\label{_unit_8hpp_source}\index{Client/include/Game/Unit.hpp@{Client/include/Game/Unit.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00002}00002 \textcolor{comment}{** EPITECH PROJECT, 2023}}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00003}00003 \textcolor{comment}{** Untitled (Workspace)}}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00004}00004 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00005}00005 \textcolor{comment}{** Unit.hpp}}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00006}00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00008}00008 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00009}00009 \textcolor{preprocessor}{    \#include "{}Drawable.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00011}\mbox{\hyperlink{class_unit}{00011}} \textcolor{keyword}{class }\mbox{\hyperlink{class_unit}{Unit}} \{}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00012}00012     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00013}00013         \mbox{\hyperlink{class_unit}{Unit}}(\textcolor{keyword}{const} std::string \&path, \textcolor{keyword}{const} \mbox{\hyperlink{struct_drawable_params}{DrawableParams}} \&params, \textcolor{keyword}{const} \mbox{\hyperlink{struct_rigid_body_params}{RigidBodyParams}} \&rigidBodyParams);}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00015}00015         \textcolor{keywordtype}{void} setPosition(sf::Vector2f pos);}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00016}00016         \textcolor{keywordtype}{void} setScale(sf::Vector2f scale);}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00017}00017         \textcolor{keywordtype}{void} setRotation(\textcolor{keywordtype}{float} rotation);}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00018}00018         \textcolor{keywordtype}{void} setAnimation(\mbox{\hyperlink{class_animation}{Animation}} *animation);}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00020}00020         \textcolor{keywordtype}{void} update(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00021}00021         \textcolor{keywordtype}{void} draw(sf::RenderWindow \&window);}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00022}00022     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00023}00023         \mbox{\hyperlink{class_drawable}{Drawable}} \_drawable;}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00024}00024         \mbox{\hyperlink{class_rigid_body}{RigidBody}} \_rigidBody;}
+\DoxyCodeLine{\Hypertarget{_unit_8hpp_source_l00025}00025 \};}
+
+\end{DoxyCode}

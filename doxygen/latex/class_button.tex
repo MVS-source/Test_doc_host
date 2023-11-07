@@ -1,0 +1,131 @@
+\hypertarget{class_button}{}\doxysection{Button Class Reference}
+\label{class_button}\index{Button@{Button}}
+
+
+Inheritance diagram for Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=129pt]{class_button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_button__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_button_a373002c4831ce4d33bf9732894587517}{Button}} (const std\+::string \&path, \mbox{\hyperlink{struct_drawable_params}{Drawable\+Params}} \&\&dparams, \mbox{\hyperlink{struct_rigid_body_params}{Rigid\+Body\+Params}} \&\&rparams, std\+::function$<$ void()$>$ callback)
+\item 
+void \mbox{\hyperlink{class_button_a160a4d91d008d2e8a7707e9477eb5535}{hovered}} (sf\+::\+Vector2i mouse\+Pos)
+\item 
+bool \mbox{\hyperlink{class_button_a96e705aa9d92e90b1e437fb772a00865}{is\+Clicked}} (sf\+::\+Vector2i mouse\+Pos)
+\item 
+void \mbox{\hyperlink{class_button_ad80c8b9b99af0b1ffdf834990c2f0cf9}{check\+Click}} (sf\+::\+Vector2i mouse\+Pos)
+\item 
+\mbox{\Hypertarget{class_button_a3f91d783863c4d3cab1b23f3381f7266}\label{class_button_a3f91d783863c4d3cab1b23f3381f7266}} 
+void {\bfseries update} (float dt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_button_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{_button_8hpp_source}{Button.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_button_a373002c4831ce4d33bf9732894587517}\label{class_button_a373002c4831ce4d33bf9732894587517}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{\mbox{\hyperlink{struct_drawable_params}{Drawable\+Params}} \&\&}]{dparams,  }\item[{\mbox{\hyperlink{struct_rigid_body_params}{Rigid\+Body\+Params}} \&\&}]{rparams,  }\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_button_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_button_8cpp_source}{Button.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011 : \mbox{\hyperlink{class_unit}{Unit}}(path, dparams, rparams),}
+\DoxyCodeLine{00012   \_callback(callback)}
+\DoxyCodeLine{00013 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_button_ad80c8b9b99af0b1ffdf834990c2f0cf9}\label{class_button_ad80c8b9b99af0b1ffdf834990c2f0cf9}} 
+\index{Button@{Button}!checkClick@{checkClick}}
+\index{checkClick@{checkClick}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{checkClick()}{checkClick()}}
+{\footnotesize\ttfamily void Button\+::check\+Click (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i}]{mouse\+Pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_button_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_button_8cpp_source}{Button.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031 \{}
+\DoxyCodeLine{00032     \textcolor{keywordflow}{if} (\_rigidBody.contains(sf::Vector2f(mousePos.x, mousePos.y)))}
+\DoxyCodeLine{00033         \textcolor{keywordflow}{if} (\_callback)}
+\DoxyCodeLine{00034             \_callback();}
+\DoxyCodeLine{00035 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_button_a160a4d91d008d2e8a7707e9477eb5535}\label{class_button_a160a4d91d008d2e8a7707e9477eb5535}} 
+\index{Button@{Button}!hovered@{hovered}}
+\index{hovered@{hovered}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{hovered()}{hovered()}}
+{\footnotesize\ttfamily void Button\+::hovered (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i}]{mouse\+Pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_button_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_button_8cpp_source}{Button.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{if} (isClicked(mousePos))}
+\DoxyCodeLine{00018         \_drawable.setBrightness(1.5);}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00020         \_drawable.setBrightness(1);}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_button_a96e705aa9d92e90b1e437fb772a00865}\label{class_button_a96e705aa9d92e90b1e437fb772a00865}} 
+\index{Button@{Button}!isClicked@{isClicked}}
+\index{isClicked@{isClicked}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{isClicked()}{isClicked()}}
+{\footnotesize\ttfamily bool Button\+::is\+Clicked (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i}]{mouse\+Pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_button_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_button_8cpp_source}{Button.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024 \{}
+\DoxyCodeLine{00025     \textcolor{keywordflow}{if} (\_rigidBody.contains(sf::Vector2f(mousePos.x, mousePos.y)))}
+\DoxyCodeLine{00026         \textcolor{keywordflow}{return} (\textcolor{keyword}{true});}
+\DoxyCodeLine{00027     \textcolor{keywordflow}{return} (\textcolor{keyword}{false});}
+\DoxyCodeLine{00028 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/\+Game/Button.\+hpp\item 
+Client/src/\+Game/Button.\+cpp\end{DoxyCompactItemize}

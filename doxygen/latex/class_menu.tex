@@ -1,0 +1,114 @@
+\hypertarget{class_menu}{}\doxysection{Menu Class Reference}
+\label{class_menu}\index{Menu@{Menu}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_menu_af7f545ca73fbe3e0faaee74dc6c32767}{Menu}} (sf\+::\+Video\+Mode video\+Mode)
+\item 
+void \mbox{\hyperlink{class_menu_a35656cd130e24d69383a5c9d0a73a38c}{run}} ()
+\item 
+bool \mbox{\hyperlink{class_menu_a159df904f266e20a1e087989f4b6e6c1}{check\+Connection}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_menu_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{_menu_8hpp_source}{Menu.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_menu_af7f545ca73fbe3e0faaee74dc6c32767}\label{class_menu_af7f545ca73fbe3e0faaee74dc6c32767}} 
+\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}\item[{sf\+::\+Video\+Mode}]{video\+Mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_menu_8cpp_source}{Menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011                                 : \_window(videomode, WINDOW\_TITLE),}
+\DoxyCodeLine{00012 \_music(MUSIC),}
+\DoxyCodeLine{00013 \_background(BACKGROUND, sf::Vector2f(0, 0)),}
+\DoxyCodeLine{00014 \_title(TITLE, \{-\/100, -\/100\}),}
+\DoxyCodeLine{00015 \_connect(\textcolor{keyword}{false}),}
+\DoxyCodeLine{00016 \_play(ENTER, \mbox{\hyperlink{struct_drawable_params}{DrawableParams}}(sf::Vector2f(400, 400), sf::Vector2f(1, 1), 0, PLAYBUTTON\_RECT), \mbox{\hyperlink{struct_rigid_body_params}{RigidBodyParams}}(sf::Vector2f(400, 400), sf::Vector2f(0, 0), sf::FloatRect(PLAYBUTTON\_RECT)), [\textcolor{keyword}{this}]() \{}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{if} (checkConnection())}
+\DoxyCodeLine{00018         \_connect = \textcolor{keyword}{true};}
+\DoxyCodeLine{00019 \})}
+\DoxyCodeLine{00020 \{}
+\DoxyCodeLine{00021     \_font = loadFont();}
+\DoxyCodeLine{00022     \_userName = \mbox{\hyperlink{class_prompt_box}{PromptBox}}(sf::Vector2f(100, 200), sf::Vector2f(300, 70), \textcolor{stringliteral}{"{}USERNAME : "{}}, \_font);}
+\DoxyCodeLine{00023     \_window.setFramerateLimit(60);}
+\DoxyCodeLine{00024     \_music.repeat(\textcolor{keyword}{true});}
+\DoxyCodeLine{00025     \_music.play();}
+\DoxyCodeLine{00026 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_a159df904f266e20a1e087989f4b6e6c1}\label{class_menu_a159df904f266e20a1e087989f4b6e6c1}} 
+\index{Menu@{Menu}!checkConnection@{checkConnection}}
+\index{checkConnection@{checkConnection}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{checkConnection()}{checkConnection()}}
+{\footnotesize\ttfamily bool Menu\+::check\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{_menu_8cpp_source}{Menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044 \{}
+\DoxyCodeLine{00045     \textcolor{comment}{// std::regex ipRegex("{}\string^(25[0-\/5]|2[0-\/4][0-\/9]|[01]?[0-\/9][0-\/9]?)\(\backslash\)\(\backslash\)."{}"{}(25[0-\/5]|2[0-\/4][0-\/9]|[01]?[0-\/9][0-\/9]?)\(\backslash\)\(\backslash\)."{}}}
+\DoxyCodeLine{00046     \textcolor{comment}{//                   "{}(25[0-\/5]|2[0-\/4][0-\/9]|[01]?[0-\/9][0-\/9]?)\(\backslash\)\(\backslash\)."{}"{}(25[0-\/5]|2[0-\/4][0-\/9]|[01]?[0-\/9][0-\/9]?)\$"{});}}
+\DoxyCodeLine{00047     \textcolor{keywordflow}{if} (\_userName.getUserInput().empty())}
+\DoxyCodeLine{00048         \textcolor{keywordflow}{return} (\textcolor{keyword}{false});}
+\DoxyCodeLine{00049     \textcolor{comment}{// if (\_IpPrompt.getUserInput().size() > 12 || \_PortPrompt.getUserInput().size() > 5)}}
+\DoxyCodeLine{00050     \textcolor{comment}{//     return (false);}}
+\DoxyCodeLine{00051     \textcolor{comment}{// if (std::stoi(\_PortPrompt.getUserInput()) > 9800 || std::stoi(\_PortPrompt.getUserInput()) < 0)}}
+\DoxyCodeLine{00052     \textcolor{comment}{//     return (false);}}
+\DoxyCodeLine{00053     \textcolor{comment}{// if (!std::regex\_match(formatIP(), ipRegex))}}
+\DoxyCodeLine{00054     \textcolor{comment}{//     return (false);}}
+\DoxyCodeLine{00055     \textcolor{keywordflow}{return} (\textcolor{keyword}{true});}
+\DoxyCodeLine{00056 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_menu_a35656cd130e24d69383a5c9d0a73a38c}\label{class_menu_a35656cd130e24d69383a5c9d0a73a38c}} 
+\index{Menu@{Menu}!run@{run}}
+\index{run@{run}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Menu\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_menu_8cpp_source}{Menu.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029 \{}
+\DoxyCodeLine{00030     \textcolor{keywordflow}{while} (\_window.isOpen()) \{}
+\DoxyCodeLine{00031         \textcolor{keywordflow}{if} (!\_connect) \{}
+\DoxyCodeLine{00032         menuEvents();}
+\DoxyCodeLine{00033         drawMenu();}
+\DoxyCodeLine{00034         \textcolor{comment}{/* \} else \{}}
+\DoxyCodeLine{00035 \textcolor{comment}{            Game game(\_window, \_userName.getUserInput());}}
+\DoxyCodeLine{00036 \textcolor{comment}{            game.run();}}
+\DoxyCodeLine{00037 \textcolor{comment}{        \} */}}
+\DoxyCodeLine{00038         \}}
+\DoxyCodeLine{00039     \}}
+\DoxyCodeLine{00040     \_music.stop();}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/Menu.\+hpp\item 
+Client/src/Menu.\+cpp\end{DoxyCompactItemize}

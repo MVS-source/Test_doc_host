@@ -1,0 +1,80 @@
+\hypertarget{structnetwork_1_1connect__message}{}\doxysection{network\+::connect\+\_\+message Struct Reference}
+\label{structnetwork_1_1connect__message}\index{network::connect\_message@{network::connect\_message}}
+
+
+Collaboration diagram for network\+::connect\+\_\+message\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{structnetwork_1_1connect__message__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnetwork_1_1_connection}{Connection}} $>$ \mbox{\hyperlink{structnetwork_1_1connect__message_ac371265506fd4a512a00de9a500e1b82}{connection}} = nullptr
+\item 
+\mbox{\hyperlink{structnetwork_1_1message}{message}} \mbox{\hyperlink{structnetwork_1_1connect__message_ab4b0f7215c75463e5888c7672b2975f9}{msg}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{structnetwork_1_1connect__message_a5fbc0de151b218176ff001285664e80f}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structnetwork_1_1connect__message}{connect\+\_\+message}} \&msg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_message_8hpp_source_l00055}{55}} of file \mbox{\hyperlink{_message_8hpp_source}{Message.\+hpp}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structnetwork_1_1connect__message_a5fbc0de151b218176ff001285664e80f}\label{structnetwork_1_1connect__message_a5fbc0de151b218176ff001285664e80f}} 
+\index{network::connect\_message@{network::connect\_message}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!network::connect\_message@{network::connect\_message}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structnetwork_1_1connect__message}{connect\+\_\+message}} \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{_message_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_message_8cpp_source}{Message.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024     \{}
+\DoxyCodeLine{00025         os << msg.msg;}
+\DoxyCodeLine{00026         \textcolor{keywordflow}{return} (os);}
+\DoxyCodeLine{00027     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnetwork_1_1connect__message_ac371265506fd4a512a00de9a500e1b82}\label{structnetwork_1_1connect__message_ac371265506fd4a512a00de9a500e1b82}} 
+\index{network::connect\_message@{network::connect\_message}!connection@{connection}}
+\index{connection@{connection}!network::connect\_message@{network::connect\_message}}
+\doxysubsubsection{\texorpdfstring{connection}{connection}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classnetwork_1_1_connection}{Connection}}$>$ network\+::connect\+\_\+message\+::connection = nullptr}
+
+
+
+Definition at line \mbox{\hyperlink{_message_8hpp_source_l00056}{56}} of file \mbox{\hyperlink{_message_8hpp_source}{Message.\+hpp}}.
+
+\mbox{\Hypertarget{structnetwork_1_1connect__message_ab4b0f7215c75463e5888c7672b2975f9}\label{structnetwork_1_1connect__message_ab4b0f7215c75463e5888c7672b2975f9}} 
+\index{network::connect\_message@{network::connect\_message}!msg@{msg}}
+\index{msg@{msg}!network::connect\_message@{network::connect\_message}}
+\doxysubsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnetwork_1_1message}{message}} network\+::connect\+\_\+message\+::msg \{\}}
+
+
+
+Definition at line \mbox{\hyperlink{_message_8hpp_source_l00057}{57}} of file \mbox{\hyperlink{_message_8hpp_source}{Message.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/\+Network/Message.\+hpp\end{DoxyCompactItemize}

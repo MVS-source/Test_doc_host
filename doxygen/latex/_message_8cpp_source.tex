@@ -1,0 +1,67 @@
+\hypertarget{_message_8cpp_source}{}\doxysection{Message.\+cpp}
+\label{_message_8cpp_source}\index{Client/src/Network/Message.cpp@{Client/src/Network/Message.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00002}00002 \textcolor{comment}{** EPITECH PROJECT, 2023}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00003}00003 \textcolor{comment}{** Untitled (Workspace)}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00004}00004 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00005}00005 \textcolor{comment}{** Message.cpp}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00006}00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}Message.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00010}00010 \textcolor{keyword}{namespace }network \{}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00012}00012     \textcolor{keywordtype}{size\_t} message::size()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00013}00013 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00014}00014         \textcolor{keywordflow}{return} (\textcolor{keyword}{sizeof}(m\_header) + body.size());}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00015}00015     \}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00017}00017     std::ostream \&operator<<(std::ostream \&os, \textcolor{keyword}{const} message \&msg)}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00019}00019         os << \textcolor{stringliteral}{"{}id: "{}} << \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(msg.header.id) << \textcolor{stringliteral}{"{} size: "{}} << msg.header.size;}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00020}00020         return (os);}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00021}00021     \}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00023}00023     std::ostream \&operator<<(std::ostream \&os, \textcolor{keyword}{const} connect\_message \&msg)}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00024}00024     \{}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00025}00025         os << msg.msg;}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00026}00026         \textcolor{keywordflow}{return} (os);}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00030}00030 \textcolor{comment}{/*size\_t network::message::size() const}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00031}00031 \textcolor{comment}{\{}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00032}00032 \textcolor{comment}{    return sizeof(header) + body.size();}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00033}00033 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00034}00034 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00035}00035 \textcolor{comment}{std::ostream \&network::operator<<(std::ostream \&os, const network::message \&msg)}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00036}00036 \textcolor{comment}{\{}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00037}00037 \textcolor{comment}{    os << "{}id: "{} << static\_cast<int>(msg.header.id) << "{} size: "{} << msg.header.size;}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00038}00038 \textcolor{comment}{    return os;}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00039}00039 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00040}00040 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00041}00041 \textcolor{comment}{template<typename DataType>}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00042}00042 \textcolor{comment}{network::message \&network::operator<<(network::message \&msg, const DataType \&data)}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00043}00043 \textcolor{comment}{\{}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00044}00044 \textcolor{comment}{    static\_assert(std::is\_standard\_layout<DataType>::value, "{}Data is too complex"{});}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00045}00045 \textcolor{comment}{    size\_t size = msg.body.size();}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00046}00046 \textcolor{comment}{    msg.body.resize(size + sizeof(DataType));}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00047}00047 \textcolor{comment}{    std::memcpy(msg.body.data() + size, \&data, sizeof(DataType));}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00048}00048 \textcolor{comment}{    msg.header.size = msg.size();}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00049}00049 \textcolor{comment}{    return msg;}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00050}00050 \textcolor{comment}{\}}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00051}00051 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00052}00052 \textcolor{comment}{template<typename DataType>}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00053}00053 \textcolor{comment}{network::message \&network::operator>>(network::message \&msg, DataType \&data)}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00054}00054 \textcolor{comment}{\{}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00055}00055 \textcolor{comment}{    static\_assert(std::is\_standard\_layout<DataType>::value, "{}Data is too complex"{});}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00056}00056 \textcolor{comment}{    size\_t size = msg.body.size() -\/ sizeof(DataType);}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00057}00057 \textcolor{comment}{    msg.body.resize(size + sizeof(DataType));}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00058}00058 \textcolor{comment}{    std::memcpy(\&data, msg.body.data() + size, sizeof(DataType));}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00059}00059 \textcolor{comment}{    msg.header.size = msg.size();}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00060}00060 \textcolor{comment}{    return msg;}}
+\DoxyCodeLine{\Hypertarget{_message_8cpp_source_l00061}00061 \textcolor{comment}{\}*/}}
+
+\end{DoxyCode}

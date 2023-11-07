@@ -1,0 +1,283 @@
+\hypertarget{classnetwork_1_1_i_client}{}\doxysection{network\+::IClient Class Reference}
+\label{classnetwork_1_1_i_client}\index{network::IClient@{network::IClient}}
+
+
+Inheritance diagram for network\+::IClient\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classnetwork_1_1_i_client__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnetwork_1_1_i_client_ae7cf183bc64b5f3fe6da9785a4055766}{IClient}} (std\+::string ip=IP, std\+::string port=PORT, std\+::string id=\char`\"{}\char`\"{})
+\item 
+bool \mbox{\hyperlink{classnetwork_1_1_i_client_ab70f779cad68a6f12a3daa8c7bf18145}{Connect}} ()
+\item 
+void \mbox{\hyperlink{classnetwork_1_1_i_client_ad4df8bfb5514e952bffa4e687044e60f}{Disconnect}} ()
+\item 
+bool \mbox{\hyperlink{classnetwork_1_1_i_client_a5e6df45d3f35b1fbc406797d6d6ca89d}{is\+Connected}} () const
+\item 
+\mbox{\hyperlink{classnetwork_1_1_t_queue}{TQueue}} \& \mbox{\hyperlink{classnetwork_1_1_i_client_a6c1b999cbc9b397c4cbd4f04d6bed485}{get\+Recv\+Queue}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::asio\+::io\+\_\+context \mbox{\hyperlink{classnetwork_1_1_i_client_af6442be39175f0ddb82255c4dcc86798}{\+\_\+io\+\_\+context}}
+\item 
+boost\+::asio\+::io\+\_\+context\+::work \mbox{\hyperlink{classnetwork_1_1_i_client_a720378cb99f69f08ad44c4676879173a}{\+\_\+work}}
+\item 
+boost\+::asio\+::ip\+::udp\+::socket \mbox{\hyperlink{classnetwork_1_1_i_client_a97798862db87f94bd42c68403633e604}{\+\_\+usocket}}
+\item 
+boost\+::asio\+::ip\+::tcp\+::socket \mbox{\hyperlink{classnetwork_1_1_i_client_aba06f4c85ccbd17d9258b13d8031026c}{\+\_\+tsocket}}
+\item 
+std\+::thread \mbox{\hyperlink{classnetwork_1_1_i_client_ad8e4bb9707985cd94eb8807c62333f0b}{\+\_\+context\+\_\+thread}}
+\item 
+boost\+::asio\+::ip\+::udp\+::endpoint \mbox{\hyperlink{classnetwork_1_1_i_client_a9492006eb0878a540e2ee30fb93850ee}{\+\_\+uendpoint}}
+\item 
+boost\+::asio\+::ip\+::tcp\+::endpoint \mbox{\hyperlink{classnetwork_1_1_i_client_a1570cc06be12afa8f32400c23158a05e}{\+\_\+tendpoint}}
+\item 
+boost\+::system\+::error\+\_\+code \mbox{\hyperlink{classnetwork_1_1_i_client_aec371536afba447d44ac57619e948ec6}{\+\_\+ec}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classnetwork_1_1_connection}{Connection}} $>$ \mbox{\hyperlink{classnetwork_1_1_i_client_aa568f46f1b37bda32d72cf9e077c8c61}{\+\_\+connection}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_i_client_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{_i_client_8hpp_source}{IClient.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnetwork_1_1_i_client_ae7cf183bc64b5f3fe6da9785a4055766}\label{classnetwork_1_1_i_client_ae7cf183bc64b5f3fe6da9785a4055766}} 
+\index{network::IClient@{network::IClient}!IClient@{IClient}}
+\index{IClient@{IClient}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{IClient()}{IClient()}}
+{\footnotesize\ttfamily network\+::\+IClient\+::\+IClient (\begin{DoxyParamCaption}\item[{std\+::string}]{ip = {\ttfamily IP},  }\item[{std\+::string}]{port = {\ttfamily PORT},  }\item[{std\+::string}]{id = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_i_client_8cpp_source}{IClient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011                                                               : \_io\_context(),}
+\DoxyCodeLine{00012     \_usocket(\_io\_context), \_tsocket(\_io\_context), \_work(\_io\_context),}
+\DoxyCodeLine{00013     \_ip(ip), \_port(port), \_id(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00014     \{}
+\DoxyCodeLine{00015         \textcolor{comment}{// \_connection = std::make\_unique<Connection>(\_io\_context, \_recvQueue);}}
+\DoxyCodeLine{00016         \textcolor{keywordflow}{if} (!Connect())}
+\DoxyCodeLine{00017             std::cerr << \textcolor{stringliteral}{"{}Failed to connect"{}} << std::endl;}
+\DoxyCodeLine{00018         \textcolor{keywordflow}{if} (!\_connection-\/>SetUdp(IP, UPORT))}
+\DoxyCodeLine{00019             std::cerr << \textcolor{stringliteral}{"{}Failed to set UDP"{}} << std::endl;}
+\DoxyCodeLine{00020     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classnetwork_1_1_i_client_a11e14d85baacd1ce09bdbee560734e73}\label{classnetwork_1_1_i_client_a11e14d85baacd1ce09bdbee560734e73}} 
+\index{network::IClient@{network::IClient}!````~IClient@{$\sim$IClient}}
+\index{````~IClient@{$\sim$IClient}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{$\sim$IClient()}{~IClient()}}
+{\footnotesize\ttfamily network\+::\+IClient\+::$\sim$\+IClient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{_i_client_8cpp_source}{IClient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023     \{}
+\DoxyCodeLine{00024         Disconnect();}
+\DoxyCodeLine{00025     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnetwork_1_1_i_client_ab70f779cad68a6f12a3daa8c7bf18145}\label{classnetwork_1_1_i_client_ab70f779cad68a6f12a3daa8c7bf18145}} 
+\index{network::IClient@{network::IClient}!Connect@{Connect}}
+\index{Connect@{Connect}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily bool network\+::\+IClient\+::\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_i_client_8cpp_source}{IClient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028     \{}
+\DoxyCodeLine{00029         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00030             \_connection = std::make\_unique<Connection>(\_io\_context, \_recvQueue);}
+\DoxyCodeLine{00031             \_connection-\/>Connect(\_ip, \_port);}
+\DoxyCodeLine{00032             \_context\_thread = std::thread([\&]() \{\_io\_context.run();\});}
+\DoxyCodeLine{00033         \} \textcolor{keywordflow}{catch} (std::exception \&e) \{}
+\DoxyCodeLine{00034             std::cerr << e.what() << std::endl;}
+\DoxyCodeLine{00035             \textcolor{keywordflow}{return} (\textcolor{keyword}{false});}
+\DoxyCodeLine{00036         \}}
+\DoxyCodeLine{00037         \textcolor{keywordflow}{return} (\textcolor{keyword}{true});}
+\DoxyCodeLine{00038     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classnetwork_1_1_i_client_ad4df8bfb5514e952bffa4e687044e60f}\label{classnetwork_1_1_i_client_ad4df8bfb5514e952bffa4e687044e60f}} 
+\index{network::IClient@{network::IClient}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{Disconnect()}{Disconnect()}}
+{\footnotesize\ttfamily void network\+::\+IClient\+::\+Disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{_i_client_8cpp_source}{IClient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041     \{}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{if} (\_connection) \{}
+\DoxyCodeLine{00043             \_connection-\/>Disconnect();}
+\DoxyCodeLine{00044         \}}
+\DoxyCodeLine{00045         \_io\_context.stop();}
+\DoxyCodeLine{00046         \textcolor{keywordflow}{if} (\_context\_thread.joinable())}
+\DoxyCodeLine{00047             \_context\_thread.join();}
+\DoxyCodeLine{00048         \_connection.release();}
+\DoxyCodeLine{00049     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classnetwork_1_1_i_client_a6c1b999cbc9b397c4cbd4f04d6bed485}\label{classnetwork_1_1_i_client_a6c1b999cbc9b397c4cbd4f04d6bed485}} 
+\index{network::IClient@{network::IClient}!getRecvQueue@{getRecvQueue}}
+\index{getRecvQueue@{getRecvQueue}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{getRecvQueue()}{getRecvQueue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnetwork_1_1_t_queue}{TQueue}} \& network\+::\+IClient\+::get\+Recv\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8cpp_source_l00058}{58}} of file \mbox{\hyperlink{_i_client_8cpp_source}{IClient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059     \{}
+\DoxyCodeLine{00060         \textcolor{keywordflow}{return} (\_recvQueue);}
+\DoxyCodeLine{00061     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classnetwork_1_1_i_client_a5e6df45d3f35b1fbc406797d6d6ca89d}\label{classnetwork_1_1_i_client_a5e6df45d3f35b1fbc406797d6d6ca89d}} 
+\index{network::IClient@{network::IClient}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily bool network\+::\+IClient\+::is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{_i_client_8cpp_source}{IClient.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052     \{}
+\DoxyCodeLine{00053         \textcolor{keywordflow}{if} (\_connection)}
+\DoxyCodeLine{00054             \textcolor{keywordflow}{return} (\_connection-\/>IsConnected());}
+\DoxyCodeLine{00055         \textcolor{keywordflow}{return} (\textcolor{keyword}{false});}
+\DoxyCodeLine{00056     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classnetwork_1_1_i_client_aa568f46f1b37bda32d72cf9e077c8c61}\label{classnetwork_1_1_i_client_aa568f46f1b37bda32d72cf9e077c8c61}} 
+\index{network::IClient@{network::IClient}!\_connection@{\_connection}}
+\index{\_connection@{\_connection}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{\_connection}{\_connection}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classnetwork_1_1_connection}{Connection}}$>$ network\+::\+IClient\+::\+\_\+connection\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{_i_client_8hpp_source}{IClient.\+hpp}}.
+
+\mbox{\Hypertarget{classnetwork_1_1_i_client_ad8e4bb9707985cd94eb8807c62333f0b}\label{classnetwork_1_1_i_client_ad8e4bb9707985cd94eb8807c62333f0b}} 
+\index{network::IClient@{network::IClient}!\_context\_thread@{\_context\_thread}}
+\index{\_context\_thread@{\_context\_thread}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{\_context\_thread}{\_context\_thread}}
+{\footnotesize\ttfamily std\+::thread network\+::\+IClient\+::\+\_\+context\+\_\+thread\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8hpp_source_l00031}{31}} of file \mbox{\hyperlink{_i_client_8hpp_source}{IClient.\+hpp}}.
+
+\mbox{\Hypertarget{classnetwork_1_1_i_client_aec371536afba447d44ac57619e948ec6}\label{classnetwork_1_1_i_client_aec371536afba447d44ac57619e948ec6}} 
+\index{network::IClient@{network::IClient}!\_ec@{\_ec}}
+\index{\_ec@{\_ec}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{\_ec}{\_ec}}
+{\footnotesize\ttfamily boost\+::system\+::error\+\_\+code network\+::\+IClient\+::\+\_\+ec\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{_i_client_8hpp_source}{IClient.\+hpp}}.
+
+\mbox{\Hypertarget{classnetwork_1_1_i_client_af6442be39175f0ddb82255c4dcc86798}\label{classnetwork_1_1_i_client_af6442be39175f0ddb82255c4dcc86798}} 
+\index{network::IClient@{network::IClient}!\_io\_context@{\_io\_context}}
+\index{\_io\_context@{\_io\_context}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{\_io\_context}{\_io\_context}}
+{\footnotesize\ttfamily boost\+::asio\+::io\+\_\+context network\+::\+IClient\+::\+\_\+io\+\_\+context\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{_i_client_8hpp_source}{IClient.\+hpp}}.
+
+\mbox{\Hypertarget{classnetwork_1_1_i_client_a1570cc06be12afa8f32400c23158a05e}\label{classnetwork_1_1_i_client_a1570cc06be12afa8f32400c23158a05e}} 
+\index{network::IClient@{network::IClient}!\_tendpoint@{\_tendpoint}}
+\index{\_tendpoint@{\_tendpoint}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{\_tendpoint}{\_tendpoint}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::tcp\+::endpoint network\+::\+IClient\+::\+\_\+tendpoint\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8hpp_source_l00033}{33}} of file \mbox{\hyperlink{_i_client_8hpp_source}{IClient.\+hpp}}.
+
+\mbox{\Hypertarget{classnetwork_1_1_i_client_aba06f4c85ccbd17d9258b13d8031026c}\label{classnetwork_1_1_i_client_aba06f4c85ccbd17d9258b13d8031026c}} 
+\index{network::IClient@{network::IClient}!\_tsocket@{\_tsocket}}
+\index{\_tsocket@{\_tsocket}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{\_tsocket}{\_tsocket}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::tcp\+::socket network\+::\+IClient\+::\+\_\+tsocket\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{_i_client_8hpp_source}{IClient.\+hpp}}.
+
+\mbox{\Hypertarget{classnetwork_1_1_i_client_a9492006eb0878a540e2ee30fb93850ee}\label{classnetwork_1_1_i_client_a9492006eb0878a540e2ee30fb93850ee}} 
+\index{network::IClient@{network::IClient}!\_uendpoint@{\_uendpoint}}
+\index{\_uendpoint@{\_uendpoint}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{\_uendpoint}{\_uendpoint}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::udp\+::endpoint network\+::\+IClient\+::\+\_\+uendpoint\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8hpp_source_l00032}{32}} of file \mbox{\hyperlink{_i_client_8hpp_source}{IClient.\+hpp}}.
+
+\mbox{\Hypertarget{classnetwork_1_1_i_client_a97798862db87f94bd42c68403633e604}\label{classnetwork_1_1_i_client_a97798862db87f94bd42c68403633e604}} 
+\index{network::IClient@{network::IClient}!\_usocket@{\_usocket}}
+\index{\_usocket@{\_usocket}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{\_usocket}{\_usocket}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::udp\+::socket network\+::\+IClient\+::\+\_\+usocket\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8hpp_source_l00029}{29}} of file \mbox{\hyperlink{_i_client_8hpp_source}{IClient.\+hpp}}.
+
+\mbox{\Hypertarget{classnetwork_1_1_i_client_a720378cb99f69f08ad44c4676879173a}\label{classnetwork_1_1_i_client_a720378cb99f69f08ad44c4676879173a}} 
+\index{network::IClient@{network::IClient}!\_work@{\_work}}
+\index{\_work@{\_work}!network::IClient@{network::IClient}}
+\doxysubsubsection{\texorpdfstring{\_work}{\_work}}
+{\footnotesize\ttfamily boost\+::asio\+::io\+\_\+context\+::work network\+::\+IClient\+::\+\_\+work\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_i_client_8hpp_source_l00028}{28}} of file \mbox{\hyperlink{_i_client_8hpp_source}{IClient.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Client/include/\+Network/IClient.\+hpp\item 
+Client/src/\+Network/IClient.\+cpp\end{DoxyCompactItemize}

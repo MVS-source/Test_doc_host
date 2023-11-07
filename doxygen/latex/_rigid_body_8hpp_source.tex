@@ -1,0 +1,33 @@
+\hypertarget{_rigid_body_8hpp_source}{}\doxysection{Rigid\+Body.\+hpp}
+\label{_rigid_body_8hpp_source}\index{Client/include/Game/RigidBody.hpp@{Client/include/Game/RigidBody.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00002}00002 \textcolor{comment}{** EPITECH PROJECT, 2023}}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00003}00003 \textcolor{comment}{** Untitled (Workspace)}}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00004}00004 \textcolor{comment}{** File description:}}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00005}00005 \textcolor{comment}{** RigidBody.hpp}}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00006}00006 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00008}00008 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00009}00009 \textcolor{preprocessor}{    \#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00011}\mbox{\hyperlink{class_rigid_body}{00011}} \textcolor{keyword}{class }\mbox{\hyperlink{class_rigid_body}{RigidBody}} \{}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00012}00012     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00013}00013         \mbox{\hyperlink{class_rigid_body}{RigidBody}}(sf::Vector2f pos = \{0, 0\}, sf::Vector2f vel = \{0, 0\}, sf::FloatRect collider = \{0, 0, 0, 0\});}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00014}00014         \mbox{\hyperlink{class_rigid_body}{\string~RigidBody}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00016}00016         sf::Vector2f getPosition();}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00018}00018         \textcolor{keywordtype}{void} setPosition(sf::Vector2f pos);}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00019}00019         \textcolor{keywordtype}{void} setVelocity(sf::Vector2f vel);}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00020}00020         \textcolor{keywordtype}{void} setCollider(sf::FloatRect collider);}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00022}00022         \textcolor{keywordtype}{bool} isColliding(\textcolor{keyword}{const} \mbox{\hyperlink{class_rigid_body}{RigidBody}} \&other);}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00023}00023         \textcolor{keywordtype}{bool} contains(sf::Vector2f pos);}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00024}00024     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00025}00025         sf::Vector2f \_vel;}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00026}00026         sf::FloatRect \_collider;}
+\DoxyCodeLine{\Hypertarget{_rigid_body_8hpp_source_l00027}00027 \};}
+
+\end{DoxyCode}
