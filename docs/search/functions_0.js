@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['clearscreen_0',['clearScreen',['../class_renderer.html#a3b5f86a8916b9075e7b852a9fd5d37a2',1,'Renderer']]],
-  ['client_1',['Client',['../class_client.html#a38aacc9eda023eff7dc44d9b8cd530fe',1,'Client']]],
-  ['cstreambuffer_2',['CStreamBuffer',['../class_c_stream_buffer.html#ac9c6fd17ad2026709db6a80aa7346e42',1,'CStreamBuffer']]]
+  ['addclient_0',['addClient',['../class_client_manager.html#a8991e5aa60249ce5c2991557ab0e8d78',1,'ClientManager']]],
+  ['addudp_1',['addUdp',['../class_client_manager.html#aa21d685bf5c2a8c0b1187da918c40989',1,'ClientManager']]],
+  ['animation_2',['Animation',['../class_animation.html#a6353d585c4a1aa26cfbc6ee24d314969',1,'Animation']]]
 ];

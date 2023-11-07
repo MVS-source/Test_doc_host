@@ -71,23 +71,23 @@ $(function() {
   <div class="headertitle"><div class="title">UDPServer.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_u_d_p_server_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** EPITECH PROJECT, 2023</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">** Untitled (Workspace)</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** File description:</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** UDPServer.cpp</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;UDPServer.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_u_d_p_server_8hpp.html">UDPServer.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>UPDServer::UPDServer(boost::asio::io_context&amp; io_context, std::shared_ptr&lt;ClientManager&gt; clientManager)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_u_p_d_server.html#afb68210c16559ad5931abb04db4b71e5">   10</a></span><a class="code hl_function" href="class_u_p_d_server.html#afb68210c16559ad5931abb04db4b71e5">UPDServer::UPDServer</a>(boost::asio::io_context&amp; io_context, std::shared_ptr&lt;ClientManager&gt; clientManager)</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    : _io_context(io_context), _clientManager(clientManager),</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    socket_(io_context, boost::asio::ip::udp::endpoint(boost::asio::ip::udp::v4(), 54321))</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    start_receive();</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> UPDServer::sendToClient(<span class="keyword">const</span> boost::asio::ip::udp::endpoint&amp; client, <span class="keyword">const</span> std::string&amp; message) {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_u_p_d_server.html#afa2207e5609377342c735a26a8b384b2">   17</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_p_d_server.html#afa2207e5609377342c735a26a8b384b2">UPDServer::sendToClient</a>(<span class="keyword">const</span> boost::asio::ip::udp::endpoint&amp; client, <span class="keyword">const</span> std::string&amp; message) {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    socket_.async_send_to(boost::asio::buffer(message), client,</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        [<span class="keyword">this</span>](<span class="keyword">const</span> boost::system::error_code&amp; ec, std::size_t size) {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="keywordflow">if</span> (ec)</div>
@@ -114,12 +114,15 @@ $(function() {
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">if</span> (!error) {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Received: &quot;</span> &lt;&lt; std::string(recv_buffer_.data(), bytes_transferred) &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        sendToClient(remote_endpoint_, <span class="stringliteral">&quot;Hello from udp server!&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="class_u_p_d_server.html#afa2207e5609377342c735a26a8b384b2">sendToClient</a>(remote_endpoint_, <span class="stringliteral">&quot;Hello from udp server!&quot;</span>);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> UPDServer::handle_send(boost::shared_ptr&lt;std::string&gt; <span class="comment">/*message*/</span>)</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{}</div>
+<div class="ttc" id="a_u_d_p_server_8hpp_html"><div class="ttname"><a href="_u_d_p_server_8hpp.html">UDPServer.hpp</a></div></div>
+<div class="ttc" id="aclass_u_p_d_server_html_afa2207e5609377342c735a26a8b384b2"><div class="ttname"><a href="class_u_p_d_server.html#afa2207e5609377342c735a26a8b384b2">UPDServer::sendToClient</a></div><div class="ttdeci">void sendToClient(const boost::asio::ip::udp::endpoint &amp;client, const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> <a href="_u_d_p_server_8cpp_source.html#l00017">UDPServer.cpp:17</a></div></div>
+<div class="ttc" id="aclass_u_p_d_server_html_afb68210c16559ad5931abb04db4b71e5"><div class="ttname"><a href="class_u_p_d_server.html#afb68210c16559ad5931abb04db4b71e5">UPDServer::UPDServer</a></div><div class="ttdeci">UPDServer(boost::asio::io_context &amp;io_context, std::shared_ptr&lt; ClientManager &gt; clientManager)</div><div class="ttdef"><b>Definition:</b> <a href="_u_d_p_server_8cpp_source.html#l00010">UDPServer.cpp:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

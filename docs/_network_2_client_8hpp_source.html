@@ -71,7 +71,7 @@ $(function() {
   <div class="headertitle"><div class="title">Client.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_network_2_client_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** EPITECH PROJECT, 2023</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">** Untitled (Workspace)</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** File description:</span></div>
@@ -85,7 +85,7 @@ $(function() {
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">    #include &lt;boost/asio/ip/udp.hpp&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">    #include &lt;boost/bind/bind.hpp&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">    #include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">    #include &quot;IClient.hpp&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">    #include &quot;<a class="code" href="_i_client_8hpp.html">IClient.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// #define PORT    12345</span></div>
@@ -114,15 +114,19 @@ $(function() {
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">class </span><a class="code hl_class" href="class_client.html">Client</a> : <span class="keyword">public</span> <a class="code hl_class" href="classnetwork_1_1_i_client.html">network::IClient</a> {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="class_client.html#a38aacc9eda023eff7dc44d9b8cd530fe">Client</a>(std::string ip, std::string port, std::string <span class="keywordtype">id</span>): network::IClient(ip, port, id) {};</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_client.html#ab909a639c2ecc670827321f03d1ce6ee">   44</a></span>        <a class="code hl_function" href="class_client.html#ab909a639c2ecc670827321f03d1ce6ee">Client</a>(std::string ip, std::string port, std::string <span class="keywordtype">id</span>): <a class="code hl_namespace" href="namespacenetwork.html">network</a>::<a class="code hl_function" href="classnetwork_1_1_i_client.html#ae7cf183bc64b5f3fe6da9785a4055766">IClient</a>(ip, port, id) {};</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_client.html#ae0bc335d720265d4d6e8a72cf7a2a9aa">   45</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_client.html#ae0bc335d720265d4d6e8a72cf7a2a9aa">run</a>();</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="comment">// bool fire(float x, float y);</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="comment">// void sendHi();</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+<div class="ttc" id="a_i_client_8hpp_html"><div class="ttname"><a href="_i_client_8hpp.html">IClient.hpp</a></div></div>
 <div class="ttc" id="aclass_client_html"><div class="ttname"><a href="class_client.html">Client</a></div><div class="ttdoc">Networking client.</div><div class="ttdef"><b>Definition:</b> <a href="_client_8hpp_source.html#l00026">Client.hpp:26</a></div></div>
-<div class="ttc" id="aclass_client_html_a38aacc9eda023eff7dc44d9b8cd530fe"><div class="ttname"><a href="class_client.html#a38aacc9eda023eff7dc44d9b8cd530fe">Client::Client</a></div><div class="ttdeci">Client(boost::asio::io_context &amp;io_context)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_client_8cpp_source.html#l00014">client.cpp:14</a></div></div>
+<div class="ttc" id="aclass_client_html_ab909a639c2ecc670827321f03d1ce6ee"><div class="ttname"><a href="class_client.html#ab909a639c2ecc670827321f03d1ce6ee">Client::Client</a></div><div class="ttdeci">Client(std::string ip, std::string port, std::string id)</div><div class="ttdef"><b>Definition:</b> <a href="_network_2_client_8hpp_source.html#l00044">Client.hpp:44</a></div></div>
+<div class="ttc" id="aclass_client_html_ae0bc335d720265d4d6e8a72cf7a2a9aa"><div class="ttname"><a href="class_client.html#ae0bc335d720265d4d6e8a72cf7a2a9aa">Client::run</a></div><div class="ttdeci">void run()</div></div>
 <div class="ttc" id="aclassnetwork_1_1_i_client_html"><div class="ttname"><a href="classnetwork_1_1_i_client.html">network::IClient</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_client_8hpp_source.html#l00018">IClient.hpp:18</a></div></div>
+<div class="ttc" id="aclassnetwork_1_1_i_client_html_ae7cf183bc64b5f3fe6da9785a4055766"><div class="ttname"><a href="classnetwork_1_1_i_client.html#ae7cf183bc64b5f3fe6da9785a4055766">network::IClient::IClient</a></div><div class="ttdeci">IClient(std::string ip=IP, std::string port=PORT, std::string id=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="_i_client_8cpp_source.html#l00011">IClient.cpp:11</a></div></div>
+<div class="ttc" id="anamespacenetwork_html"><div class="ttname"><a href="namespacenetwork.html">network</a></div><div class="ttdef"><b>Definition:</b> <a href="_connection_8hpp_source.html#l00013">Connection.hpp:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

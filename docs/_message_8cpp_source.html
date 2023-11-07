@@ -71,31 +71,31 @@ $(function() {
   <div class="headertitle"><div class="title">Message.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_message_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** EPITECH PROJECT, 2023</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">** Untitled (Workspace)</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** File description:</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** Message.cpp</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Message.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_message_8hpp.html">Message.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>network {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenetwork.html">network</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">size_t</span> message::size()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structnetwork_1_1message.html#a5983f097617fc2ef3fb5c7dfe593d23f">   12</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="structnetwork_1_1message.html#a5983f097617fc2ef3fb5c7dfe593d23f">message::size</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">return</span> (<span class="keyword">sizeof</span>(m_header) + body.size());</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">return</span> (<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structnetwork_1_1m__header.html">m_header</a>) + <a class="code hl_variable" href="structnetwork_1_1message.html#ae767a44a82b224c165e080de2578df26">body</a>.size());</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, <span class="keyword">const</span> message &amp;msg)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structnetwork_1_1message.html#a214d4a3d9c6182945a621df31e1f4211">   17</a></span>    std::ostream &amp;<a class="code hl_function" href="namespacenetwork.html#a9b3971af114e69e8e1df6d4746920658">operator&lt;&lt;</a>(std::ostream &amp;os, <span class="keyword">const</span> <a class="code hl_struct" href="structnetwork_1_1message.html">message</a> &amp;msg)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        os &lt;&lt; <span class="stringliteral">&quot;id: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(msg.header.id) &lt;&lt; <span class="stringliteral">&quot; size: &quot;</span> &lt;&lt; msg.header.size;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        os &lt;&lt; <span class="stringliteral">&quot;id: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(msg.<a class="code hl_variable" href="structnetwork_1_1message.html#a134424775ca91b24e8b7f0c4073a8baf">header</a>.<a class="code hl_variable" href="structnetwork_1_1m__header.html#afdb4e5ec5d9f54070b5bd75208822b12">id</a>) &lt;&lt; <span class="stringliteral">&quot; size: &quot;</span> &lt;&lt; msg.<a class="code hl_variable" href="structnetwork_1_1message.html#a134424775ca91b24e8b7f0c4073a8baf">header</a>.<a class="code hl_variable" href="structnetwork_1_1m__header.html#ad92afd9615fedcde7c3a1b8f529f4826">size</a>;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        return (os);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::ostream &amp;operator&lt;&lt;(std::ostream &amp;os, <span class="keyword">const</span> connect_message &amp;msg)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structnetwork_1_1connect__message.html#a5fbc0de151b218176ff001285664e80f">   23</a></span>    std::ostream &amp;<a class="code hl_function" href="namespacenetwork.html#a9b3971af114e69e8e1df6d4746920658">operator&lt;&lt;</a>(std::ostream &amp;os, <span class="keyword">const</span> <a class="code hl_struct" href="structnetwork_1_1connect__message.html">connect_message</a> &amp;msg)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        os &lt;&lt; msg.msg;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        os &lt;&lt; msg.<a class="code hl_variable" href="structnetwork_1_1connect__message.html#ab4b0f7215c75463e5888c7672b2975f9">msg</a>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> (os);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
@@ -132,6 +132,18 @@ $(function() {
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">    msg.header.size = msg.size();</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">    return msg;</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">}*/</span></div>
+<div class="ttc" id="a_message_8hpp_html"><div class="ttname"><a href="_message_8hpp.html">Message.hpp</a></div></div>
+<div class="ttc" id="anamespacenetwork_html"><div class="ttname"><a href="namespacenetwork.html">network</a></div><div class="ttdef"><b>Definition:</b> <a href="_connection_8hpp_source.html#l00013">Connection.hpp:13</a></div></div>
+<div class="ttc" id="anamespacenetwork_html_a9b3971af114e69e8e1df6d4746920658"><div class="ttname"><a href="namespacenetwork.html#a9b3971af114e69e8e1df6d4746920658">network::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const message &amp;msg)</div><div class="ttdef"><b>Definition:</b> <a href="_message_8cpp_source.html#l00017">Message.cpp:17</a></div></div>
+<div class="ttc" id="astructnetwork_1_1connect__message_html"><div class="ttname"><a href="structnetwork_1_1connect__message.html">network::connect_message</a></div><div class="ttdef"><b>Definition:</b> <a href="_message_8hpp_source.html#l00055">Message.hpp:55</a></div></div>
+<div class="ttc" id="astructnetwork_1_1connect__message_html_ab4b0f7215c75463e5888c7672b2975f9"><div class="ttname"><a href="structnetwork_1_1connect__message.html#ab4b0f7215c75463e5888c7672b2975f9">network::connect_message::msg</a></div><div class="ttdeci">message msg</div><div class="ttdef"><b>Definition:</b> <a href="_message_8hpp_source.html#l00057">Message.hpp:57</a></div></div>
+<div class="ttc" id="astructnetwork_1_1m__header_html"><div class="ttname"><a href="structnetwork_1_1m__header.html">network::m_header</a></div><div class="ttdef"><b>Definition:</b> <a href="_message_8hpp_source.html#l00024">Message.hpp:24</a></div></div>
+<div class="ttc" id="astructnetwork_1_1m__header_html_ad92afd9615fedcde7c3a1b8f529f4826"><div class="ttname"><a href="structnetwork_1_1m__header.html#ad92afd9615fedcde7c3a1b8f529f4826">network::m_header::size</a></div><div class="ttdeci">u_int32_t size</div><div class="ttdef"><b>Definition:</b> <a href="_message_8hpp_source.html#l00026">Message.hpp:26</a></div></div>
+<div class="ttc" id="astructnetwork_1_1m__header_html_afdb4e5ec5d9f54070b5bd75208822b12"><div class="ttname"><a href="structnetwork_1_1m__header.html#afdb4e5ec5d9f54070b5bd75208822b12">network::m_header::id</a></div><div class="ttdeci">request id</div><div class="ttdef"><b>Definition:</b> <a href="_message_8hpp_source.html#l00025">Message.hpp:25</a></div></div>
+<div class="ttc" id="astructnetwork_1_1message_html"><div class="ttname"><a href="structnetwork_1_1message.html">network::message</a></div><div class="ttdef"><b>Definition:</b> <a href="_message_8hpp_source.html#l00029">Message.hpp:29</a></div></div>
+<div class="ttc" id="astructnetwork_1_1message_html_a134424775ca91b24e8b7f0c4073a8baf"><div class="ttname"><a href="structnetwork_1_1message.html#a134424775ca91b24e8b7f0c4073a8baf">network::message::header</a></div><div class="ttdeci">m_header header</div><div class="ttdef"><b>Definition:</b> <a href="_message_8hpp_source.html#l00030">Message.hpp:30</a></div></div>
+<div class="ttc" id="astructnetwork_1_1message_html_a5983f097617fc2ef3fb5c7dfe593d23f"><div class="ttname"><a href="structnetwork_1_1message.html#a5983f097617fc2ef3fb5c7dfe593d23f">network::message::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition:</b> <a href="_message_8cpp_source.html#l00012">Message.cpp:12</a></div></div>
+<div class="ttc" id="astructnetwork_1_1message_html_ae767a44a82b224c165e080de2578df26"><div class="ttname"><a href="structnetwork_1_1message.html#ae767a44a82b224c165e080de2578df26">network::message::body</a></div><div class="ttdeci">std::vector&lt; u_int8_t &gt; body</div><div class="ttdef"><b>Definition:</b> <a href="_message_8hpp_source.html#l00031">Message.hpp:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

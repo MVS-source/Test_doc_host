@@ -71,22 +71,22 @@ $(function() {
   <div class="headertitle"><div class="title">Menu.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_menu_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** EPITECH PROJECT, 2023</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">** Untitled (Workspace)</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** File description:</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** Menu.cpp</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Menu.hpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Game.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_menu_8hpp.html">Menu.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_game_8hpp.html">Game.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>Menu::Menu(sf::VideoMode videomode) : _window(videomode, WINDOW_TITLE),</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>_music(MUSIC),</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>_background(BACKGROUND, sf::Vector2f(0, 0)),</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>_title(TITLE, {-100, -100}),</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_menu.html#af7f545ca73fbe3e0faaee74dc6c32767">   11</a></span><a class="code hl_function" href="class_menu.html#af7f545ca73fbe3e0faaee74dc6c32767">Menu::Menu</a>(sf::VideoMode videomode) : _window(videomode, <a class="code hl_define" href="_utils_8hpp.html#a3adf7b7b13572f2baf3379a8f2f4220a">WINDOW_TITLE</a>),</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>_music(<a class="code hl_define" href="_utils_8hpp.html#a60aa36f7a10852a15f314ffd5cb7faca">MUSIC</a>),</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>_background(<a class="code hl_define" href="_utils_8hpp.html#a850b2f07a67b73890889e63fb8a49fda">BACKGROUND</a>, sf::Vector2f(0, 0)),</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>_title(<a class="code hl_define" href="_renderer_8hpp.html#a60a56c499875b57369f7ef3a5a227cb9">TITLE</a>, {-100, -100}),</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>_connect(<span class="keyword">false</span>),</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>_play(ENTER, <a class="code hl_struct" href="struct_drawable_params.html">DrawableParams</a>(sf::Vector2f(400, 400), sf::Vector2f(1, 1), 0, PLAYBUTTON_RECT), <a class="code hl_struct" href="struct_rigid_body_params.html">RigidBodyParams</a>(sf::Vector2f(400, 400), sf::Vector2f(0, 0), sf::FloatRect(PLAYBUTTON_RECT)), [<span class="keyword">this</span>]() {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>_play(<a class="code hl_define" href="_utils_8hpp.html#af4bced5cf8ed55746d4b5d34f9a0fe39">ENTER</a>, <a class="code hl_struct" href="struct_drawable_params.html">DrawableParams</a>(sf::Vector2f(400, 400), sf::Vector2f(1, 1), 0, <a class="code hl_define" href="_utils_8hpp.html#abee1e8b6e0a6d5a50dd1a15925179739">PLAYBUTTON_RECT</a>), <a class="code hl_struct" href="struct_rigid_body_params.html">RigidBodyParams</a>(sf::Vector2f(400, 400), sf::Vector2f(0, 0), sf::FloatRect(<a class="code hl_define" href="_utils_8hpp.html#abee1e8b6e0a6d5a50dd1a15925179739">PLAYBUTTON_RECT</a>)), [<span class="keyword">this</span>]() {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">if</span> (checkConnection())</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        _connect = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>})</div>
@@ -98,7 +98,7 @@ $(function() {
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    _music.play();</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> Menu::run()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_menu.html#a35656cd130e24d69383a5c9d0a73a38c">   28</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_menu.html#a35656cd130e24d69383a5c9d0a73a38c">Menu::run</a>()</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">while</span> (_window.isOpen()) {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">if</span> (!_connect) {</div>
@@ -110,14 +110,14 @@ $(function() {
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        } */</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    _music.stop();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    _music.<a class="code hl_function" href="class_music.html#a008211b514c1c89c15399d3384d3fcea">stop</a>();</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">bool</span> Menu::checkConnection()</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_menu.html#a159df904f266e20a1e087989f4b6e6c1">   43</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_menu.html#a159df904f266e20a1e087989f4b6e6c1">Menu::checkConnection</a>()</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// std::regex ipRegex(&quot;^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.&quot;&quot;(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.&quot;</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//                   &quot;(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.&quot;&quot;(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$&quot;);</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (_userName.getUserInput().empty())</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (_userName.<a class="code hl_function" href="class_prompt_box.html#ab8db8f7a66832a9d72657f4bf2af0931">getUserInput</a>().empty())</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// if (_IpPrompt.getUserInput().size() &gt; 12 || _PortPrompt.getUserInput().size() &gt; 5)</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">//     return (false);</span></div>
@@ -131,10 +131,10 @@ $(function() {
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">void</span> Menu::drawMenu()</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    _window.clear();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    _background.draw(_window);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    _title.draw(_window);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    _play.draw(_window);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    _userName.draw(_window);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    _background.<a class="code hl_function" href="class_game_object.html#abf4de46e52c8f23d18d51bc29744b136">draw</a>(_window);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    _title.<a class="code hl_function" href="class_game_object.html#abf4de46e52c8f23d18d51bc29744b136">draw</a>(_window);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    _play.<a class="code hl_function" href="class_unit.html#a5c2026d7f3bcb8312b435e9c3042f8af">draw</a>(_window);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    _userName.<a class="code hl_function" href="class_i_box.html#a817e10c6b84cbd9fdc1a6e320ca34912">draw</a>(_window);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    _window.display();</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
@@ -146,14 +146,14 @@ $(function() {
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (event.type == sf::Event::KeyPressed) {</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">if</span> (event.key.code == sf::Keyboard::Escape)</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                _window.close();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                _userName.prompt(event.key.code, 15);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                _userName.<a class="code hl_function" href="class_prompt_box.html#a0e68831ee1b962543cd37b54deb34be4">prompt</a>(event.key.code, 15);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">if</span> (event.type == sf::Event::Closed)</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            _window.close();</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">if</span> (event.type == sf::Event::MouseButtonPressed) {</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">if</span> (event.mouseButton.button == sf::Mouse::Left) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                _userName.switchPrompt(sf::Mouse::getPosition(_window));</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                _play.checkClick(sf::Mouse::getPosition(_window));</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                _userName.<a class="code hl_function" href="class_prompt_box.html#acbaffed9f21da08d296051b742fffea2">switchPrompt</a>(sf::Mouse::getPosition(_window));</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                _play.<a class="code hl_function" href="class_button.html#ad80c8b9b99af0b1ffdf834990c2f0cf9">checkClick</a>(sf::Mouse::getPosition(_window));</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
@@ -161,7 +161,7 @@ $(function() {
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>sf::Font Menu::loadFont()</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>{</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span> (!_font.loadFromFile(FONT)) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span> (!_font.loadFromFile(<a class="code hl_define" href="_utils_8hpp.html#adda1b1c264e2f9b66d594d98e4ed7ff6">FONT</a>)) {</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Error: Font not found&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Error: Font not found&quot;</span>);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
@@ -179,7 +179,27 @@ $(function() {
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// }</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">return</span> (tmp.erase(tmp.size() - 1));</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>}</div>
+<div class="ttc" id="a_game_8hpp_html"><div class="ttname"><a href="_game_8hpp.html">Game.hpp</a></div></div>
+<div class="ttc" id="a_menu_8hpp_html"><div class="ttname"><a href="_menu_8hpp.html">Menu.hpp</a></div></div>
+<div class="ttc" id="a_renderer_8hpp_html_a60a56c499875b57369f7ef3a5a227cb9"><div class="ttname"><a href="_renderer_8hpp.html#a60a56c499875b57369f7ef3a5a227cb9">TITLE</a></div><div class="ttdeci">#define TITLE</div><div class="ttdef"><b>Definition:</b> <a href="_renderer_8hpp_source.html#l00013">Renderer.hpp:13</a></div></div>
+<div class="ttc" id="a_utils_8hpp_html_a3adf7b7b13572f2baf3379a8f2f4220a"><div class="ttname"><a href="_utils_8hpp.html#a3adf7b7b13572f2baf3379a8f2f4220a">WINDOW_TITLE</a></div><div class="ttdeci">#define WINDOW_TITLE</div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00019">Utils.hpp:19</a></div></div>
+<div class="ttc" id="a_utils_8hpp_html_a60aa36f7a10852a15f314ffd5cb7faca"><div class="ttname"><a href="_utils_8hpp.html#a60aa36f7a10852a15f314ffd5cb7faca">MUSIC</a></div><div class="ttdeci">#define MUSIC</div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00069">Utils.hpp:69</a></div></div>
+<div class="ttc" id="a_utils_8hpp_html_a850b2f07a67b73890889e63fb8a49fda"><div class="ttname"><a href="_utils_8hpp.html#a850b2f07a67b73890889e63fb8a49fda">BACKGROUND</a></div><div class="ttdeci">#define BACKGROUND</div><div class="ttdoc">‍SPRITES</div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00053">Utils.hpp:53</a></div></div>
+<div class="ttc" id="a_utils_8hpp_html_abee1e8b6e0a6d5a50dd1a15925179739"><div class="ttname"><a href="_utils_8hpp.html#abee1e8b6e0a6d5a50dd1a15925179739">PLAYBUTTON_RECT</a></div><div class="ttdeci">#define PLAYBUTTON_RECT</div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00047">Utils.hpp:47</a></div></div>
+<div class="ttc" id="a_utils_8hpp_html_adda1b1c264e2f9b66d594d98e4ed7ff6"><div class="ttname"><a href="_utils_8hpp.html#adda1b1c264e2f9b66d594d98e4ed7ff6">FONT</a></div><div class="ttdeci">#define FONT</div><div class="ttdoc">‍FONT</div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00064">Utils.hpp:64</a></div></div>
+<div class="ttc" id="a_utils_8hpp_html_af4bced5cf8ed55746d4b5d34f9a0fe39"><div class="ttname"><a href="_utils_8hpp.html#af4bced5cf8ed55746d4b5d34f9a0fe39">ENTER</a></div><div class="ttdeci">#define ENTER</div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00060">Utils.hpp:60</a></div></div>
+<div class="ttc" id="aclass_button_html_ad80c8b9b99af0b1ffdf834990c2f0cf9"><div class="ttname"><a href="class_button.html#ad80c8b9b99af0b1ffdf834990c2f0cf9">Button::checkClick</a></div><div class="ttdeci">void checkClick(sf::Vector2i mousePos)</div><div class="ttdef"><b>Definition:</b> <a href="_button_8cpp_source.html#l00030">Button.cpp:30</a></div></div>
+<div class="ttc" id="aclass_game_object_html_abf4de46e52c8f23d18d51bc29744b136"><div class="ttname"><a href="class_game_object.html#abf4de46e52c8f23d18d51bc29744b136">GameObject::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window)</div><div class="ttdef"><b>Definition:</b> <a href="_game_object_8cpp_source.html#l00040">GameObject.cpp:40</a></div></div>
+<div class="ttc" id="aclass_i_box_html_a817e10c6b84cbd9fdc1a6e320ca34912"><div class="ttname"><a href="class_i_box.html#a817e10c6b84cbd9fdc1a6e320ca34912">IBox::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window)</div><div class="ttdef"><b>Definition:</b> <a href="_i_box_8cpp_source.html#l00020">IBox.cpp:20</a></div></div>
+<div class="ttc" id="aclass_menu_html_a159df904f266e20a1e087989f4b6e6c1"><div class="ttname"><a href="class_menu.html#a159df904f266e20a1e087989f4b6e6c1">Menu::checkConnection</a></div><div class="ttdeci">bool checkConnection()</div><div class="ttdef"><b>Definition:</b> <a href="_menu_8cpp_source.html#l00043">Menu.cpp:43</a></div></div>
+<div class="ttc" id="aclass_menu_html_a35656cd130e24d69383a5c9d0a73a38c"><div class="ttname"><a href="class_menu.html#a35656cd130e24d69383a5c9d0a73a38c">Menu::run</a></div><div class="ttdeci">void run()</div><div class="ttdef"><b>Definition:</b> <a href="_menu_8cpp_source.html#l00028">Menu.cpp:28</a></div></div>
+<div class="ttc" id="aclass_menu_html_af7f545ca73fbe3e0faaee74dc6c32767"><div class="ttname"><a href="class_menu.html#af7f545ca73fbe3e0faaee74dc6c32767">Menu::Menu</a></div><div class="ttdeci">Menu(sf::VideoMode videoMode)</div><div class="ttdef"><b>Definition:</b> <a href="_menu_8cpp_source.html#l00011">Menu.cpp:11</a></div></div>
+<div class="ttc" id="aclass_music_html_a008211b514c1c89c15399d3384d3fcea"><div class="ttname"><a href="class_music.html#a008211b514c1c89c15399d3384d3fcea">Music::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdef"><b>Definition:</b> <a href="_music_8cpp_source.html#l00022">Music.cpp:22</a></div></div>
 <div class="ttc" id="aclass_prompt_box_html"><div class="ttname"><a href="class_prompt_box.html">PromptBox</a></div><div class="ttdef"><b>Definition:</b> <a href="_prompt_box_8hpp_source.html#l00011">PromptBox.hpp:11</a></div></div>
+<div class="ttc" id="aclass_prompt_box_html_a0e68831ee1b962543cd37b54deb34be4"><div class="ttname"><a href="class_prompt_box.html#a0e68831ee1b962543cd37b54deb34be4">PromptBox::prompt</a></div><div class="ttdeci">void prompt(sf::Keyboard::Key key, int limit)</div><div class="ttdef"><b>Definition:</b> <a href="_prompt_box_8cpp_source.html#l00039">PromptBox.cpp:39</a></div></div>
+<div class="ttc" id="aclass_prompt_box_html_ab8db8f7a66832a9d72657f4bf2af0931"><div class="ttname"><a href="class_prompt_box.html#ab8db8f7a66832a9d72657f4bf2af0931">PromptBox::getUserInput</a></div><div class="ttdeci">std::string getUserInput()</div><div class="ttdef"><b>Definition:</b> <a href="_prompt_box_8cpp_source.html#l00072">PromptBox.cpp:72</a></div></div>
+<div class="ttc" id="aclass_prompt_box_html_acbaffed9f21da08d296051b742fffea2"><div class="ttname"><a href="class_prompt_box.html#acbaffed9f21da08d296051b742fffea2">PromptBox::switchPrompt</a></div><div class="ttdeci">void switchPrompt(sf::Vector2i mousePos)</div><div class="ttdef"><b>Definition:</b> <a href="_prompt_box_8cpp_source.html#l00064">PromptBox.cpp:64</a></div></div>
+<div class="ttc" id="aclass_unit_html_a5c2026d7f3bcb8312b435e9c3042f8af"><div class="ttname"><a href="class_unit.html#a5c2026d7f3bcb8312b435e9c3042f8af">Unit::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window)</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8cpp_source.html#l00043">Unit.cpp:43</a></div></div>
 <div class="ttc" id="astruct_drawable_params_html"><div class="ttname"><a href="struct_drawable_params.html">DrawableParams</a></div><div class="ttdoc">‍STRUCTS</div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00022">Utils.hpp:22</a></div></div>
 <div class="ttc" id="astruct_rigid_body_params_html"><div class="ttname"><a href="struct_rigid_body_params.html">RigidBodyParams</a></div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00033">Utils.hpp:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -71,38 +71,45 @@ $(function() {
   <div class="headertitle"><div class="title">IBox.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_i_box_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** EPITECH PROJECT, 2023</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">** Untitled (Workspace)</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** File description:</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** IBox.cpp</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;IBox.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_i_box_8hpp.html">IBox.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>sf::RectangleShape &amp;IBox::getBox()</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_i_box.html#aa494fc7441bb5216fd8c251b231dc685">   10</a></span>sf::RectangleShape &amp;<a class="code hl_function" href="class_i_box.html#aa494fc7441bb5216fd8c251b231dc685">IBox::getBox</a>()</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordflow">return</span> _box;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_i_box.html#ad3e4c41c9352cf22bca756cbe41f73b0">_box</a>;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>sf::Text &amp;IBox::getText()</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_i_box.html#a5702ae510de650cbb91dd9757ffe7b03">   15</a></span>sf::Text &amp;<a class="code hl_function" href="class_i_box.html#a5702ae510de650cbb91dd9757ffe7b03">IBox::getText</a>()</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">return</span> _text;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_i_box.html#aa7cc99692233a1bb08e452441cfe6533">_text</a>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> IBox::draw(sf::RenderWindow &amp;window)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_i_box.html#a817e10c6b84cbd9fdc1a6e320ca34912">   20</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_box.html#a817e10c6b84cbd9fdc1a6e320ca34912">IBox::draw</a>(sf::RenderWindow &amp;window)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    window.draw(_box);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    window.draw(_text);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    window.draw(<a class="code hl_variable" href="class_i_box.html#ad3e4c41c9352cf22bca756cbe41f73b0">_box</a>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    window.draw(<a class="code hl_variable" href="class_i_box.html#aa7cc99692233a1bb08e452441cfe6533">_text</a>);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">bool</span> IBox::clicked(sf::Vector2i mousePos)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_i_box.html#a6dca0160f32ad289338cf89e06bad749">   26</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_box.html#a6dca0160f32ad289338cf89e06bad749">IBox::clicked</a>(sf::Vector2i mousePos)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span> (_box.getGlobalBounds().contains(mousePos.x, mousePos.y))</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_i_box.html#ad3e4c41c9352cf22bca756cbe41f73b0">_box</a>.getGlobalBounds().contains(mousePos.x, mousePos.y))</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="ttc" id="a_i_box_8hpp_html"><div class="ttname"><a href="_i_box_8hpp.html">IBox.hpp</a></div></div>
+<div class="ttc" id="aclass_i_box_html_a5702ae510de650cbb91dd9757ffe7b03"><div class="ttname"><a href="class_i_box.html#a5702ae510de650cbb91dd9757ffe7b03">IBox::getText</a></div><div class="ttdeci">sf::Text &amp; getText()</div><div class="ttdef"><b>Definition:</b> <a href="_i_box_8cpp_source.html#l00015">IBox.cpp:15</a></div></div>
+<div class="ttc" id="aclass_i_box_html_a6dca0160f32ad289338cf89e06bad749"><div class="ttname"><a href="class_i_box.html#a6dca0160f32ad289338cf89e06bad749">IBox::clicked</a></div><div class="ttdeci">bool clicked(sf::Vector2i mousePos)</div><div class="ttdef"><b>Definition:</b> <a href="_i_box_8cpp_source.html#l00026">IBox.cpp:26</a></div></div>
+<div class="ttc" id="aclass_i_box_html_a817e10c6b84cbd9fdc1a6e320ca34912"><div class="ttname"><a href="class_i_box.html#a817e10c6b84cbd9fdc1a6e320ca34912">IBox::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window)</div><div class="ttdef"><b>Definition:</b> <a href="_i_box_8cpp_source.html#l00020">IBox.cpp:20</a></div></div>
+<div class="ttc" id="aclass_i_box_html_aa494fc7441bb5216fd8c251b231dc685"><div class="ttname"><a href="class_i_box.html#aa494fc7441bb5216fd8c251b231dc685">IBox::getBox</a></div><div class="ttdeci">sf::RectangleShape &amp; getBox()</div><div class="ttdef"><b>Definition:</b> <a href="_i_box_8cpp_source.html#l00010">IBox.cpp:10</a></div></div>
+<div class="ttc" id="aclass_i_box_html_aa7cc99692233a1bb08e452441cfe6533"><div class="ttname"><a href="class_i_box.html#aa7cc99692233a1bb08e452441cfe6533">IBox::_text</a></div><div class="ttdeci">sf::Text _text</div><div class="ttdef"><b>Definition:</b> <a href="_i_box_8hpp_source.html#l00023">IBox.hpp:23</a></div></div>
+<div class="ttc" id="aclass_i_box_html_ad3e4c41c9352cf22bca756cbe41f73b0"><div class="ttname"><a href="class_i_box.html#ad3e4c41c9352cf22bca756cbe41f73b0">IBox::_box</a></div><div class="ttdeci">sf::RectangleShape _box</div><div class="ttdef"><b>Definition:</b> <a href="_i_box_8hpp_source.html#l00022">IBox.hpp:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

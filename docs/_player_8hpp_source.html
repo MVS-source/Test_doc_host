@@ -71,7 +71,7 @@ $(function() {
   <div class="headertitle"><div class="title">Player.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_player_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** EPITECH PROJECT, 2023</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">** Untitled (Workspace)</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** File description:</span></div>
@@ -79,23 +79,30 @@ $(function() {
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">    #include &quot;Music.hpp&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">    #include &quot;Bullet.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">    #include &quot;<a class="code" href="_music_8hpp.html">Music.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">    #include &quot;<a class="code" href="_bullet_8hpp.html">Bullet.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_player.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_player.html">Player</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_unit.html">Unit</a> {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_class" href="class_player.html">Player</a>(<span class="keyword">const</span> std::string &amp;path, <a class="code hl_struct" href="struct_drawable_params.html">DrawableParams</a> &amp;&amp;params, <a class="code hl_struct" href="struct_rigid_body_params.html">RigidBodyParams</a> &amp;&amp;rigidBodyParams);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="class_player.html">~Player</a>();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">void</span> update(sf::Vector2f position, <span class="keywordtype">float</span> dt);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> shoot();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">void</span> draw(sf::RenderWindow &amp;window);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_function" href="class_player.html#a29a759d7877ff44009601bb630841c39">Player</a>(<span class="keyword">const</span> std::string &amp;path, <a class="code hl_struct" href="struct_drawable_params.html">DrawableParams</a> &amp;&amp;params, <a class="code hl_struct" href="struct_rigid_body_params.html">RigidBodyParams</a> &amp;&amp;rigidBodyParams);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_function" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a1e0027c57f4c26af19d298fb3f087134">update</a>(sf::Vector2f position, <span class="keywordtype">float</span> dt);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a4cdc67fd9ca2de09af89d9ae19efe5f8">shoot</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a70bbe0afb8ef88207288c9134ae80b6e">draw</a>(sf::RenderWindow &amp;window);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">void</span> move(sf::Vector2f position, <span class="keywordtype">float</span> dt);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_class" href="class_bullet.html">Bullet</a> *_bullet = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        std::vector&lt;Bullet&gt; _bullets;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<div class="ttc" id="a_bullet_8hpp_html"><div class="ttname"><a href="_bullet_8hpp.html">Bullet.hpp</a></div></div>
+<div class="ttc" id="a_music_8hpp_html"><div class="ttname"><a href="_music_8hpp.html">Music.hpp</a></div></div>
 <div class="ttc" id="aclass_bullet_html"><div class="ttname"><a href="class_bullet.html">Bullet</a></div><div class="ttdef"><b>Definition:</b> <a href="_bullet_8hpp_source.html#l00011">Bullet.hpp:11</a></div></div>
 <div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_8hpp_source.html#l00012">Player.hpp:12</a></div></div>
+<div class="ttc" id="aclass_player_html_a1e0027c57f4c26af19d298fb3f087134"><div class="ttname"><a href="class_player.html#a1e0027c57f4c26af19d298fb3f087134">Player::update</a></div><div class="ttdeci">void update(sf::Vector2f position, float dt)</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00024">Player.cpp:24</a></div></div>
+<div class="ttc" id="aclass_player_html_a29a759d7877ff44009601bb630841c39"><div class="ttname"><a href="class_player.html#a29a759d7877ff44009601bb630841c39">Player::Player</a></div><div class="ttdeci">Player(const std::string &amp;path, DrawableParams &amp;&amp;params, RigidBodyParams &amp;&amp;rigidBodyParams)</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00011">Player.cpp:11</a></div></div>
+<div class="ttc" id="aclass_player_html_a4cdc67fd9ca2de09af89d9ae19efe5f8"><div class="ttname"><a href="class_player.html#a4cdc67fd9ca2de09af89d9ae19efe5f8">Player::shoot</a></div><div class="ttdeci">void shoot()</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00046">Player.cpp:46</a></div></div>
+<div class="ttc" id="aclass_player_html_a70bbe0afb8ef88207288c9134ae80b6e"><div class="ttname"><a href="class_player.html#a70bbe0afb8ef88207288c9134ae80b6e">Player::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window)</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00052">Player.cpp:52</a></div></div>
+<div class="ttc" id="aclass_player_html_a749d2c00e1fe0f5c2746f7505a58c062"><div class="ttname"><a href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">Player::~Player</a></div><div class="ttdeci">~Player()</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cpp_source.html#l00019">Player.cpp:19</a></div></div>
 <div class="ttc" id="aclass_unit_html"><div class="ttname"><a href="class_unit.html">Unit</a></div><div class="ttdef"><b>Definition:</b> <a href="_unit_8hpp_source.html#l00011">Unit.hpp:11</a></div></div>
 <div class="ttc" id="astruct_drawable_params_html"><div class="ttname"><a href="struct_drawable_params.html">DrawableParams</a></div><div class="ttdoc">‍STRUCTS</div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00022">Utils.hpp:22</a></div></div>
 <div class="ttc" id="astruct_rigid_body_params_html"><div class="ttname"><a href="struct_rigid_body_params.html">RigidBodyParams</a></div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00033">Utils.hpp:33</a></div></div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_7eclient_0',['~Client',['../class_client.html#a840e519ca781888cbd54181572ebe3a7',1,'Client']]],
-  ['_7ecstreambuffer_1',['~CStreamBuffer',['../class_c_stream_buffer.html#a68dbfe42efde68c328dd7535fc4d07a0',1,'CStreamBuffer']]],
-  ['_7erenderer_2',['~Renderer',['../class_renderer.html#afeee408862d5bd6255a6882d47e6d5cd',1,'Renderer']]]
+  ['q_0',['q',['../class_cmd_queue.html#aab201ffe293f299e64137037124d4cb6',1,'CmdQueue']]],
+  ['queue_2ehpp_1',['Queue.hpp',['../_queue_8hpp.html',1,'']]],
+  ['quit_2',['QUIT',['../_utils_8hpp.html#ad24e2b54375e12474e65ebf7175988fb',1,'Utils.hpp']]]
 ];

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['background_0',['Background',['../class_background.html',1,'']]],
-  ['bullet_1',['Bullet',['../class_bullet.html',1,'']]],
-  ['button_2',['Button',['../class_button.html',1,'']]],
-  ['buttonbox_3',['ButtonBox',['../class_button_box.html',1,'']]]
+  ['addclient_0',['addClient',['../class_client_manager.html#a8991e5aa60249ce5c2991557ab0e8d78',1,'ClientManager']]],
+  ['addudp_1',['addUdp',['../class_client_manager.html#aa21d685bf5c2a8c0b1187da918c40989',1,'ClientManager']]],
+  ['animation_2',['Animation',['../class_animation.html',1,'Animation'],['../class_animation.html#a6353d585c4a1aa26cfbc6ee24d314969',1,'Animation::Animation()']]],
+  ['animation_2ecpp_3',['Animation.cpp',['../_animation_8cpp.html',1,'']]],
+  ['animation_2ehpp_4',['Animation.hpp',['../_animation_8hpp.html',1,'']]]
 ];

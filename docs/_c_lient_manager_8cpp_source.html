@@ -71,21 +71,21 @@ $(function() {
   <div class="headertitle"><div class="title">CLientManager.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_c_lient_manager_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** EPITECH PROJECT, 2023</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">** Untitled (Workspace)</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** File description:</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** CLientManager.cpp</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;ClientManager.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_client_manager_8hpp.html">ClientManager.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>ClientManager::ClientManager(boost::asio::io_context&amp; io_context)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_client_manager.html#a15a62c9c9af1748482d8853f2b96f61d">   10</a></span><a class="code hl_function" href="class_client_manager.html#a15a62c9c9af1748482d8853f2b96f61d">ClientManager::ClientManager</a>(boost::asio::io_context&amp; io_context)</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    _clients.reserve(_maxClients);</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>ClientManager::~ClientManager()</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_client_manager.html#af605d4fa9dab04b9874bf307277cd8a3">   15</a></span><a class="code hl_function" href="class_client_manager.html#af605d4fa9dab04b9874bf307277cd8a3">ClientManager::~ClientManager</a>()</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;client : _clients) {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        client-&gt;tcpsocket.close();</div>
@@ -93,7 +93,7 @@ $(function() {
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">size_t</span> ClientManager::addClient(boost::asio::ip::tcp::socket&amp; socket, boost::asio::ip::tcp::endpoint&amp; endpoint, boost::asio::io_context&amp; io_context)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_client_manager.html#a8991e5aa60249ce5c2991557ab0e8d78">   23</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="class_client_manager.html#a8991e5aa60249ce5c2991557ab0e8d78">ClientManager::addClient</a>(boost::asio::ip::tcp::socket&amp; socket, boost::asio::ip::tcp::endpoint&amp; endpoint, boost::asio::io_context&amp; io_context)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">if</span> (_clients.size() &gt;= _maxClients)</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> (0);</div>
@@ -104,7 +104,7 @@ $(function() {
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">return</span> (_clients.back()-&gt;clientId);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">bool</span> ClientManager::addUdp(boost::asio::ip::udp::socket&amp; socket, boost::asio::ip::udp::endpoint&amp; endpoint, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_client_manager.html#aa21d685bf5c2a8c0b1187da918c40989">   34</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_client_manager.html#aa21d685bf5c2a8c0b1187da918c40989">ClientManager::addUdp</a>(boost::asio::ip::udp::socket&amp; socket, boost::asio::ip::udp::endpoint&amp; endpoint, <span class="keywordtype">size_t</span> <span class="keywordtype">id</span>)</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> (<span class="keywordtype">id</span> &gt;= _clients.size())</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -112,6 +112,11 @@ $(function() {
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    _clients[id]-&gt;udpEndpoint = endpoint;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="ttc" id="a_client_manager_8hpp_html"><div class="ttname"><a href="_client_manager_8hpp.html">ClientManager.hpp</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_a15a62c9c9af1748482d8853f2b96f61d"><div class="ttname"><a href="class_client_manager.html#a15a62c9c9af1748482d8853f2b96f61d">ClientManager::ClientManager</a></div><div class="ttdeci">ClientManager(boost::asio::io_context &amp;io_context)</div><div class="ttdef"><b>Definition:</b> <a href="_c_lient_manager_8cpp_source.html#l00010">CLientManager.cpp:10</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_a8991e5aa60249ce5c2991557ab0e8d78"><div class="ttname"><a href="class_client_manager.html#a8991e5aa60249ce5c2991557ab0e8d78">ClientManager::addClient</a></div><div class="ttdeci">size_t addClient(boost::asio::ip::tcp::socket &amp;socket, boost::asio::ip::tcp::endpoint &amp;endpoint, boost::asio::io_context &amp;io_context)</div><div class="ttdef"><b>Definition:</b> <a href="_c_lient_manager_8cpp_source.html#l00023">CLientManager.cpp:23</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_aa21d685bf5c2a8c0b1187da918c40989"><div class="ttname"><a href="class_client_manager.html#aa21d685bf5c2a8c0b1187da918c40989">ClientManager::addUdp</a></div><div class="ttdeci">bool addUdp(boost::asio::ip::udp::socket &amp;socket, boost::asio::ip::udp::endpoint &amp;endpoint, size_t id)</div><div class="ttdef"><b>Definition:</b> <a href="_c_lient_manager_8cpp_source.html#l00034">CLientManager.cpp:34</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_af605d4fa9dab04b9874bf307277cd8a3"><div class="ttname"><a href="class_client_manager.html#af605d4fa9dab04b9874bf307277cd8a3">ClientManager::~ClientManager</a></div><div class="ttdeci">~ClientManager()</div><div class="ttdef"><b>Definition:</b> <a href="_c_lient_manager_8cpp_source.html#l00015">CLientManager.cpp:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

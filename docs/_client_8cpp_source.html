@@ -71,7 +71,7 @@ $(function() {
   <div class="headertitle"><div class="title">client.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_client_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** EPITECH PROJECT, 2023</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">** Untitled (Workspace)</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** File description:</span></div>
@@ -84,7 +84,7 @@ $(function() {
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    _socket.open(udp::v4());</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    udp::resolver resolver(io_context);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    udp::resolver::query query(udp::v4(), std::string(<span class="stringliteral">&quot;localhost&quot;</span>), std::to_string(PORT));</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    udp::resolver::query query(udp::v4(), std::string(<span class="stringliteral">&quot;localhost&quot;</span>), std::to_string(<a class="code hl_define" href="_client_8hpp.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a>));</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    udp::resolver::iterator iter = resolver.resolve(query);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    _endpoint = *iter;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="class_client.html#ab5a8b80802c438dc16484efd9502eaf4">initClient</a>();</div>
@@ -133,6 +133,7 @@ $(function() {
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">//             }</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">//         });</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="ttc" id="a_client_8hpp_html_a614217d263be1fb1a5f76e2ff7be19a2"><div class="ttname"><a href="_client_8hpp.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a></div><div class="ttdeci">#define PORT</div><div class="ttdef"><b>Definition:</b> <a href="_client_8hpp_source.html#l00017">Client.hpp:17</a></div></div>
 <div class="ttc" id="aclass_c_stream_buffer_html_ad13ffb90ffbb1c46726cdb438e54ad9f"><div class="ttname"><a href="class_c_stream_buffer.html#ad13ffb90ffbb1c46726cdb438e54ad9f">CStreamBuffer::getCStreamBuffer</a></div><div class="ttdeci">boost::asio::streambuf &amp; getCStreamBuffer()</div><div class="ttdoc">Get the custom stream buffer.</div><div class="ttdef"><b>Definition:</b> <a href="_c_streambuffer_8cpp_source.html#l00019">CStreambuffer.cpp:19</a></div></div>
 <div class="ttc" id="aclass_c_stream_buffer_html_add010e13e3bd18eef4e5fcbd8e1ce7a4"><div class="ttname"><a href="class_c_stream_buffer.html#add010e13e3bd18eef4e5fcbd8e1ce7a4">CStreamBuffer::writeData</a></div><div class="ttdeci">void writeData(struct data &amp;d)</div><div class="ttdoc">Write data structure to the stream.</div><div class="ttdef"><b>Definition:</b> <a href="_c_streambuffer_8cpp_source.html#l00024">CStreambuffer.cpp:24</a></div></div>
 <div class="ttc" id="aclass_client_html_a38aacc9eda023eff7dc44d9b8cd530fe"><div class="ttname"><a href="class_client.html#a38aacc9eda023eff7dc44d9b8cd530fe">Client::Client</a></div><div class="ttdeci">Client(boost::asio::io_context &amp;io_context)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_client_8cpp_source.html#l00014">client.cpp:14</a></div></div>

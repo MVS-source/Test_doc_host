@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['displayscreen_0',['displayScreen',['../class_renderer.html#a38f343c2857c321b869f5e5ecf4c0e56',1,'Renderer']]],
-  ['drawsprite_1',['drawSprite',['../class_renderer.html#aaaa008f32b4da976fe4c5a01665dc910',1,'Renderer']]],
-  ['drawtext_2',['drawText',['../class_renderer.html#a61b9971f58fb16f91730bf12da9dd8d2',1,'Renderer']]]
+  ['background_0',['Background',['../class_background.html#a05b686e4ce0cbdb3b1fa14a93fdf98a1',1,'Background']]],
+  ['bullet_1',['Bullet',['../class_bullet.html#ab411ffe4ac460f5ebfebf00c46212d31',1,'Bullet']]],
+  ['button_2',['Button',['../class_button.html#a373002c4831ce4d33bf9732894587517',1,'Button']]],
+  ['buttonbox_3',['ButtonBox',['../class_button_box.html#a37fd723a2f7e372af39703523eee2304',1,'ButtonBox::ButtonBox()=default'],['../class_button_box.html#a63f6894277d42dbfac994d62bb54fa06',1,'ButtonBox::ButtonBox(sf::Vector2f pos, sf::Vector2f size, std::string text, std::string path, sf::Font &amp;font)']]]
 ];

@@ -71,42 +71,51 @@ $(function() {
   <div class="headertitle"><div class="title">Button.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<a href="_button_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** EPITECH PROJECT, 2023</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">** Untitled (Workspace)</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** File description:</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** Button.cpp</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Button.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_button_8hpp.html">Button.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>Button::Button(<span class="keyword">const</span> std::string &amp;path, <a class="code hl_struct" href="struct_drawable_params.html">DrawableParams</a> &amp;&amp;dparams, <a class="code hl_struct" href="struct_rigid_body_params.html">RigidBodyParams</a> &amp;&amp;rparams, std::function&lt;<span class="keywordtype">void</span>()&gt; callback)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_button.html#a373002c4831ce4d33bf9732894587517">   10</a></span><a class="code hl_function" href="class_button.html#a373002c4831ce4d33bf9732894587517">Button::Button</a>(<span class="keyword">const</span> std::string &amp;path, <a class="code hl_struct" href="struct_drawable_params.html">DrawableParams</a> &amp;&amp;dparams, <a class="code hl_struct" href="struct_rigid_body_params.html">RigidBodyParams</a> &amp;&amp;rparams, std::function&lt;<span class="keywordtype">void</span>()&gt; callback)</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>: <a class="code hl_class" href="class_unit.html">Unit</a>(path, dparams, rparams),</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  _callback(callback)</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{}</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> Button::hovered(sf::Vector2i mousePos)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_button.html#a160a4d91d008d2e8a7707e9477eb5535">   15</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_button.html#a160a4d91d008d2e8a7707e9477eb5535">Button::hovered</a>(sf::Vector2i mousePos)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">if</span> (isClicked(mousePos))</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        _drawable.setBrightness(1.5);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_button.html#a96e705aa9d92e90b1e437fb772a00865">isClicked</a>(mousePos))</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_variable" href="class_unit.html#a5337cd4307a532c3f62ba6c82314dabb">_drawable</a>.<a class="code hl_function" href="class_drawable.html#a94b10bc39e01038804daaaa8427a43a6">setBrightness</a>(1.5);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        _drawable.setBrightness(1);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_variable" href="class_unit.html#a5337cd4307a532c3f62ba6c82314dabb">_drawable</a>.<a class="code hl_function" href="class_drawable.html#a94b10bc39e01038804daaaa8427a43a6">setBrightness</a>(1);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">bool</span> Button::isClicked(sf::Vector2i mousePos)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_button.html#a96e705aa9d92e90b1e437fb772a00865">   23</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_button.html#a96e705aa9d92e90b1e437fb772a00865">Button::isClicked</a>(sf::Vector2i mousePos)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">if</span> (_rigidBody.contains(sf::Vector2f(mousePos.x, mousePos.y)))</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_unit.html#af5e3b3de8c43b900cec27c6793472637">_rigidBody</a>.<a class="code hl_function" href="class_rigid_body.html#a7b5f74753b851922d792921e38f0d638">contains</a>(sf::Vector2f(mousePos.x, mousePos.y)))</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> (<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">return</span> (<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> Button::checkClick(sf::Vector2i mousePos)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_button.html#ad80c8b9b99af0b1ffdf834990c2f0cf9">   30</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_button.html#ad80c8b9b99af0b1ffdf834990c2f0cf9">Button::checkClick</a>(sf::Vector2i mousePos)</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">if</span> (_rigidBody.contains(sf::Vector2f(mousePos.x, mousePos.y)))</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_unit.html#af5e3b3de8c43b900cec27c6793472637">_rigidBody</a>.<a class="code hl_function" href="class_rigid_body.html#a7b5f74753b851922d792921e38f0d638">contains</a>(sf::Vector2f(mousePos.x, mousePos.y)))</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">if</span> (_callback)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            _callback();</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="ttc" id="a_button_8hpp_html"><div class="ttname"><a href="_button_8hpp.html">Button.hpp</a></div></div>
+<div class="ttc" id="aclass_button_html_a160a4d91d008d2e8a7707e9477eb5535"><div class="ttname"><a href="class_button.html#a160a4d91d008d2e8a7707e9477eb5535">Button::hovered</a></div><div class="ttdeci">void hovered(sf::Vector2i mousePos)</div><div class="ttdef"><b>Definition:</b> <a href="_button_8cpp_source.html#l00015">Button.cpp:15</a></div></div>
+<div class="ttc" id="aclass_button_html_a373002c4831ce4d33bf9732894587517"><div class="ttname"><a href="class_button.html#a373002c4831ce4d33bf9732894587517">Button::Button</a></div><div class="ttdeci">Button(const std::string &amp;path, DrawableParams &amp;&amp;dparams, RigidBodyParams &amp;&amp;rparams, std::function&lt; void()&gt; callback)</div><div class="ttdef"><b>Definition:</b> <a href="_button_8cpp_source.html#l00010">Button.cpp:10</a></div></div>
+<div class="ttc" id="aclass_button_html_a96e705aa9d92e90b1e437fb772a00865"><div class="ttname"><a href="class_button.html#a96e705aa9d92e90b1e437fb772a00865">Button::isClicked</a></div><div class="ttdeci">bool isClicked(sf::Vector2i mousePos)</div><div class="ttdef"><b>Definition:</b> <a href="_button_8cpp_source.html#l00023">Button.cpp:23</a></div></div>
+<div class="ttc" id="aclass_button_html_ad80c8b9b99af0b1ffdf834990c2f0cf9"><div class="ttname"><a href="class_button.html#ad80c8b9b99af0b1ffdf834990c2f0cf9">Button::checkClick</a></div><div class="ttdeci">void checkClick(sf::Vector2i mousePos)</div><div class="ttdef"><b>Definition:</b> <a href="_button_8cpp_source.html#l00030">Button.cpp:30</a></div></div>
+<div class="ttc" id="aclass_drawable_html_a94b10bc39e01038804daaaa8427a43a6"><div class="ttname"><a href="class_drawable.html#a94b10bc39e01038804daaaa8427a43a6">Drawable::setBrightness</a></div><div class="ttdeci">void setBrightness(float brightness)</div><div class="ttdef"><b>Definition:</b> <a href="_drawable_8cpp_source.html#l00039">Drawable.cpp:39</a></div></div>
+<div class="ttc" id="aclass_rigid_body_html_a7b5f74753b851922d792921e38f0d638"><div class="ttname"><a href="class_rigid_body.html#a7b5f74753b851922d792921e38f0d638">RigidBody::contains</a></div><div class="ttdeci">bool contains(sf::Vector2f pos)</div><div class="ttdef"><b>Definition:</b> <a href="_rigid_body_8cpp_source.html#l00043">RigidBody.cpp:43</a></div></div>
 <div class="ttc" id="aclass_unit_html"><div class="ttname"><a href="class_unit.html">Unit</a></div><div class="ttdef"><b>Definition:</b> <a href="_unit_8hpp_source.html#l00011">Unit.hpp:11</a></div></div>
+<div class="ttc" id="aclass_unit_html_a5337cd4307a532c3f62ba6c82314dabb"><div class="ttname"><a href="class_unit.html#a5337cd4307a532c3f62ba6c82314dabb">Unit::_drawable</a></div><div class="ttdeci">Drawable _drawable</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8hpp_source.html#l00023">Unit.hpp:23</a></div></div>
+<div class="ttc" id="aclass_unit_html_af5e3b3de8c43b900cec27c6793472637"><div class="ttname"><a href="class_unit.html#af5e3b3de8c43b900cec27c6793472637">Unit::_rigidBody</a></div><div class="ttdeci">RigidBody _rigidBody</div><div class="ttdef"><b>Definition:</b> <a href="_unit_8hpp_source.html#l00024">Unit.hpp:24</a></div></div>
 <div class="ttc" id="astruct_drawable_params_html"><div class="ttname"><a href="struct_drawable_params.html">DrawableParams</a></div><div class="ttdoc">‍STRUCTS</div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00022">Utils.hpp:22</a></div></div>
 <div class="ttc" id="astruct_rigid_body_params_html"><div class="ttname"><a href="struct_rigid_body_params.html">RigidBodyParams</a></div><div class="ttdef"><b>Definition:</b> <a href="_utils_8hpp_source.html#l00033">Utils.hpp:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
